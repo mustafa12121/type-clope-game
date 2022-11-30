@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loading</title>
+    <link rel="stylesheet" href="../../css/loading.css" />
+    <link rel="icon" href="../../img/favicon.png" />
+  </head>
+
+  <body>
+    <header>
+      <span class="icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </header>
+    <div class="box"></div>
+    <div class="shadow"></div>
+    <script>
+      let desten = localStorage.getItem("destenation");
+      if (desten == "type") {
+        waitAndGo("./type.html");
+      } else {
+        waitAndGo("../../index.html");
+      }
+      function waitAndGo(href) {
+        setTimeout(() => {
+          location.href = href;
+        }, 5000);
+      }
+      document
+        .querySelector(".icon")
+        .addEventListener("click", () => window.history.back());
+    </script>
+  </body>
+</html>

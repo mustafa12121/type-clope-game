@@ -1,0 +1,207 @@
+:root {
+  --main-color: #00bcd4;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.shadow {
+  box-shadow: 0px 7px 15px 0px #787878;
+}
+.key-shadow-out {
+  box-shadow: 1px 2px 2px 0px #787878;
+}
+.key-shadow-in {
+  box-shadow: 2px 2px 5px -1px #787878 inset;
+}
+body {
+  font-family: "Open Sans";
+  user-select: none;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: var(--main-color);
+  color: white;
+}
+header .title {
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+header .setting {
+  font-size: 20px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+header .setting * {
+  transition: 0.3s transform;
+  -webkit-transition: 0.3s transform;
+  -moz-transition: 0.3s transform;
+  -ms-transition: 0.3s transform;
+  -o-transition: 0.3s transform;
+}
+header .setting .icon-on,
+header .setting .icon-off {
+  width: 40px;
+  height: 20px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  border: 2px solid white;
+  padding: 3px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+header .setting .icon-on span,
+header .setting .icon-off span {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 7px 1px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+header .setting .icon-off span {
+  background-color: red;
+  transform: translatex(17px);
+  -webkit-transform: translatex(17px);
+  -moz-transform: translatex(17px);
+  -ms-transform: translatex(17px);
+  -o-transform: translatex(17px);
+}
+
+header .setting .icon-on span {
+  background-color: greenyellow;
+  transform: translatex(0px);
+  -webkit-transform: translatex(0px);
+  -moz-transform: translatex(0px);
+  -ms-transform: translatex(0px);
+  -o-transform: translatex(0px);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--main-color);
+  height: calc(100vh - 61px);
+}
+
+section .words {
+  background-color: white;
+  font-size: 24px;
+  max-width: 80%;
+  width: 80%;
+  line-height: 2;
+  word-spacing: 10px;
+  padding: 15px 20px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+section .words .space {
+  width: 13px;
+  display: inline-block;
+  height: 33px;
+  margin-bottom: -7px;
+}
+.keybord {
+  background-color: white;
+  font-size: 15px;
+  width: 800px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 15px 5px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  position: absolute;
+  bottom: 50px;
+  gap: 10px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.keybord > span {
+  border: 1px solid black;
+  padding: 5px 15px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  position: relative;
+}
+
+.keybord span[data-key="Tap"] {
+  padding-right: 35px;
+}
+
+.keybord span[data-key="Enter"] {
+  padding-left: 35px;
+  padding-right: 5px;
+}
+.keybord span[data-key="Shift"]:not(:last-of-type) {
+  padding-right: 70px;
+}
+.keybord span[data-key="Shift"]:last-of-type {
+  padding-left: 55px;
+}
+
+.keybord span span.home-row {
+  width: 50%;
+  position: absolute;
+  height: 3px;
+  bottom: 2px;
+  align-self: center;
+  left: 9px;
+  background: #777;
+  border-radius: 20px;
+  background-image: radial-gradient(black, white);
+}
+.keybord div {
+  border: 1px solid black;
+  border-radius: 7px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 20px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.wrong {
+  background-color: #ffc1c1;
+}
+.fixed {
+  background-color: #ffffc0;
+}
+.right {
+  background-color: #daffc2;
+}
+.courent {
+  background-color: #6ad1ff;
+  color: white;
+}

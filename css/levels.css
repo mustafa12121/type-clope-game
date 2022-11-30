@@ -1,0 +1,241 @@
+body {
+  font-family: "Open Sans";
+  text-transform: capitalize;
+  user-select: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --main-color: #00bcd4;
+}
+
+.leyout,
+.delet-div {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000c2;
+  z-index: 100;
+  transition: 0.5s;
+}
+
+.leyout div {
+  background-color: var(--main-color);
+  padding: 15px 20px;
+  color: white;
+  border-radius: 7px;
+}
+
+.leyout div input:nth-child(2) {
+  border: none;
+  color: white;
+  border-bottom: 1px solid white;
+  font-size: 16px;
+  padding-left: 5px;
+  background-color: transparent;
+}
+
+.leyout i {
+  width: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.leyout div input:focus {
+  outline: none;
+}
+
+.leyout div input[type="submit"] {
+  background-color: white;
+  color: var(--main-color);
+  border: none;
+  font-size: 20px;
+  padding: 5px 10px;
+  display: block;
+  margin: 15px auto;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+header {
+  background-color: var(--main-color);
+  padding: 15px 20px;
+  color: white;
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header div span#name {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+header .sgin-out {
+  cursor: pointer;
+}
+
+.levels {
+  background-color: #00131c;
+  color: white;
+  height: calc(100vh - 58px);
+  padding: 50px 0px;
+}
+
+.levels .container {
+  padding: 0 50px;
+  display: flex;
+}
+
+.levels .container .cards {
+  display: flex;
+  gap: 20px;
+  flex-basis: 550px;
+  padding: 15px 20px;
+  flex-wrap: wrap;
+  overflow: scroll;
+  max-height: 80vh;
+  position: relative;
+}
+
+.levels .container .cards .card {
+  padding: 10px 15px;
+  transition: 0.3s;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 7px;
+  line-height: 1.4;
+  width: 150px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.levels .container .cards .card.open {
+  background-image: radial-gradient(#28e885, transparent);
+  box-shadow: 9px -10px 11px -4px #28e8857d;
+}
+
+.levels .container .cards .card.not-open {
+  pointer-events: none;
+  background-image: radial-gradient(#777, transparent);
+  box-shadow: 9px -10px 11px -4px #555;
+}
+
+.levels .container .cards .card .stars {
+  margin-top: 10px;
+}
+
+.levels .container .cards .card.open .stars {
+  color: gold;
+}
+
+.levels .container .cards .card.selected {
+  transform: scale(1.1);
+  box-shadow: 2px -2px 18px -3px #28e8857d;
+}
+
+.levels .container .cards .card .info div {
+  font-family: "Teko";
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.levels .container .results {
+  flex: 1;
+  text-align: center;
+}
+
+.levels .container .results div {
+  margin-bottom: 20px;
+}
+
+.levels .container .results div span {
+  display: block;
+}
+
+.levels .container .results .stars i.fa-solid {
+  color: gold;
+}
+
+.delet {
+  background: white;
+  color: red;
+  border-radius: 8px;
+  font-weight: bold;
+  width: fit-content;
+  padding: 10px 15px;
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  cursor: pointer;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.delet:hover {
+  background-image: radial-gradient(red, transparent);
+  background-color: transparent;
+  color: white;
+}
+
+.delet+.leyout {
+  background-image: radial-gradient(red, transparent);
+}
+
+.delet+.leyout div {
+  background-color: black;
+}
+
+.levels .container .cards .card .level {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 797px) {
+  .levels .container .cards {
+    justify-content: center;
+  }
+}
+
+.levels .container ::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+.levels .container ::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.levels .container ::-webkit-scrollbar-thumb {
+  background-image: radial-gradient(var(--main-color), transparent);
+}
+
+#speed {
+  color: var(--main-color);
+}
+
+#wrongs {
+  color: red;
+}
+
+#percent {
+  border: 1px solid red;
+}

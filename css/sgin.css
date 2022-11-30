@@ -1,0 +1,137 @@
+body {
+  font-family: "Open Sans";
+  user-select: none;
+}
+:root {
+  --main-color: #00bcd4;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::first-letter {
+  text-transform: uppercase;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  font-size: 20px;
+  background-color: var(--main-color);
+  color: white;
+  height: 57px;
+}
+header .logo {
+  font-weight: bold;
+}
+
+header div span {
+  font-weight: bold;
+  color: #fb8c00;
+}
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 109px);
+}
+
+section .sign {
+  padding: 15px 20px;
+  height: 400px;
+  max-width: 400px;
+  background-image: radial-gradient(var(--main-color) 77%, transparent);
+  border-radius: 10px;
+  color: white;
+  box-shadow: 10px 15px 10px -7px #00000075;
+}
+section .sign .sutch {
+  display: flex;
+}
+section .sign .sutch div {
+  flex: 1;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #777;
+  color: #777;
+  cursor: pointer;
+  padding: 5px 10px;
+  --border-radius: 7px;
+}
+section .sign .sutch div:hover {
+  background-color: #ddd;
+}
+section .sign .sutch div:nth-child(1) {
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+section .sign .sutch div:nth-child(2) {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+section .sign form {
+  margin-top: 50px;
+}
+
+section .sign label {
+  font-size: 1.2rem;
+}
+
+section .sign input[type="text"],
+section .sign input[type="password"] {
+  border: none;
+  color: white;
+  border-bottom: 1px solid white;
+  font-size: 16px;
+  padding-left: 5px;
+  background-color: transparent;
+}
+section .sign .password i {
+  cursor: pointer;
+  width: 20px;
+}
+section .sign input[type="submit"] {
+  background-color: white;
+  color: var(--main-color);
+  border: none;
+  font-size: 20px;
+  padding: 5px 10px;
+  display: block;
+  margin: 15px auto;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+section .sign input:focus {
+  outline: none;
+}
+section .sign .info {
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: none;
+}
+section .sign .not-fuond {
+  background-image: radial-gradient(red, transparent);
+}
+section .sign .fuond {
+  color: #32ff00;
+}
+
+footer {
+  background-color: #00131c;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  height: 52px;
+}
+footer a {
+  text-decoration: none;
+  color: var(--main-color);
+}
