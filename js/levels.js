@@ -41,6 +41,7 @@ getlevels().then((levelsList) => {
   levelsList.forEach((level) => {
     createLevelCard(level.title, level.ronde, level.requardSpeed);
   });
+
   document.querySelector("#name").innerHTML = userObj.userName;
   cards = Array.from(cardsContianer.children);
   updateInfo();
@@ -104,12 +105,17 @@ document.forms[1].onsubmit = () => {
 deletingBotton.addEventListener("click", () => {
   let player = JSON.parse(localStorage.getItem("corentPlayer"));
   if (password == player.password) {
+    console.log(player);
     deletAccount(player);
   } else {
     secondInput.style.borderBottom = "1px solid red";
   }
 });
 
+//adding the canvas
+let can = document.querySelectorAll("canvas");
+druCanvas(0, can[0], 0);
+druCanvas(0, can[1], 0);
 //fuctionalty section
 function createLevelCard(title, ronde, requardSpeed) {
   let card = document.createElement("div");
@@ -243,37 +249,28 @@ function deletAccount(player) {
 }
 
 function deletPlayerInfo(player, from) {
-  for (let i in from) {
-    if (from[i].userName == player.userName) {
-    }
-  }
-
-  from = from.filter((val) => {
-    if (val !== "empty") {
-      return true;
-    } else {
-      return false;
-    }
+  return from.filter((obj) => {
+    return obj.userName !== player.userName;
   });
-  return from;
 }
-
+//shoing the selected level information
 function showInfo(card) {
-  let starsList = document.querySelectorAll("#starsGain i");
-  let speedInfo = document.querySelector("#speed");
-  let wrongsInfo = document.querySelector("#wrongs");
-  let slectedLevel;
-  let found = false;
-  let num = card.id.match(/\d+/g).join("");
+  let starsList = document.querySelectorAll("#starsGain i"),
+    selectedLevel,
+    found = false,
+    num = card.id.match(/\d+/g).join(""),
+    canvass = document.querySelectorAll("canvas");
+
   for (let i in levelsObjs) {
     if (levelsObjs[i].levelNumber == num) {
-      slectedLevel = levelsObjs[i];
+      selectedLevel = levelsObjs[i];
       found = true;
     }
   }
   if (found) {
+    //adding full stars
     for (let j = 0; j < 5; j++) {
-      if (j < slectedLevel.stars) {
+      if (j < selectedLevel.stars) {
         starsList[j].classList.add("fa-solid");
         starsList[j].classList.remove("fa-regular");
       } else {
@@ -281,22 +278,76 @@ function showInfo(card) {
         starsList[j].classList.add("fa-regular");
       }
     }
-    speedInfo.innerHTML = `${slectedLevel.heighestSpeed} WPM`;
-    wrongsInfo.innerHTML = `${slectedLevel.wrongLetters} Letter`;
   } else {
     for (let j = 0; j < starsList.length; j++) {
       starsList[j].classList.remove("fa-solid");
       starsList[j].classList.add("fa-regular");
     }
-    speedInfo.innerHTML = `0 WPM`;
-    wrongsInfo.innerHTML = `0 Letter`;
   }
-  removeSelected();
-  card.classList.add("selected");
-}
-
-function removeSelected() {
+  //buting the bersints
+  let speedSpan = document.querySelectorAll(".bers span")[0];
+  let foltSpan = document.querySelectorAll(".bers span")[1];
+  if (selectedLevel) {
+    druCanvas(
+      selectedLevel.percent,
+      canvass[0],
+      selectedLevel.heighestSpeed,
+      speedSpan
+    );
+    druCanvas(
+      selectedLevel.percent,
+      canvass[1],
+      selectedLevel.wrongLetters,
+      foltSpan
+    );
+  } else {
+    druCanvas(0, canvass[0], 0, speedSpan);
+    druCanvas(0, canvass[1], 0, foltSpan);
+  }
+  //unselecting the cards
   Array.from(cardsContianer.children).forEach((ele) => {
     ele.classList.remove("selected");
   });
+  card.classList.add("selected");
+}
+
+function druCanvas(bers, canvas, conter, span) {
+  let newCanvas = document.createElement("canvas");
+  newCanvas.setAttribute("width", canvas.width);
+  newCanvas.setAttribute("height", canvas.width);
+  canvas.parentElement.appendChild(newCanvas);
+  canvas.remove();
+  let conte = newCanvas.getContext("2d");
+  let [centerX, centerY] = [
+    newCanvas.clientWidth / 2,
+    newCanvas.clientHeight / 2,
+  ];
+  let fullCiercel = 2 * Math.PI;
+  conte.lineWidth = 15;
+  conte.beginPath();
+  conte.strokeStyle = "#ccc";
+  conte.arc(centerX, centerY, centerX - 20, 0, fullCiercel);
+  conte.stroke();
+  let i = 0,
+    br = 0,
+    cont = 0;
+  let druer = setInterval(() => {
+    //changing the contur numbers
+    span ? (cont > conter ? "" : (span.innerHTML = `${cont}`) && cont++) : "";
+    //chosing the color
+    if (i > 0.7) {
+      conte.strokeStyle = "green";
+    } else if (i >= 0.5) conte.strokeStyle = "#f3f34c";
+    else if (i < 0.5) conte.strokeStyle = "red";
+    //end chosing the color
+    conte.beginPath();
+    i = parseFloat(i.toFixed(3));
+    conte.arc(centerX, centerY, centerX - 20, 0, i * fullCiercel);
+    if (i >= bers / 100) {
+      clearInterval(druer);
+    }
+    i += 0.01;
+    br += 0.01;
+    conte.stroke();
+  }, 20);
 }

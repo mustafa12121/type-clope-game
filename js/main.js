@@ -123,7 +123,16 @@ function includeArtical(artical) {
 }
 //watshing the artical letters and changing backgrounds
 function startlisnningArtical() {
-  let noClick = ["Shift", "Alt", "F12", "Control", "Delete", "CapsLock"];
+  let noClick = [
+    "Meta",
+    "Tab",
+    "Shift",
+    "Alt",
+    "F12",
+    "Control",
+    "Delete",
+    "CapsLock",
+  ];
   onkeydown = (ev) => {
     if (!noClick.includes(ev.key)) {
       if (ev.key == "Backspace") {

@@ -12,7 +12,7 @@ window.onload = () => {
   nameInput.focus();
 };
 let chek = document.querySelector("footer a");
-chek.innerHTML = "mustafa esmael";
+chek.innerHTML = "Mustafa Ismai'l";
 showPass.addEventListener("click", () => {
   if (showPass.classList.contains("fa-eye")) {
     pass.type = "text";
@@ -57,7 +57,6 @@ pass.addEventListener("input", () => {
   password = pass.value;
   pass.style = "";
 });
-
 submit.addEventListener("click", () => {
   if (/\w+/g.test(nameInput.value)) {
     if (/\w+/g.test(password)) {
@@ -146,7 +145,7 @@ deletUserChanging();
 function deletUserChanging() {
   if (
     cheki.textContent.toUpperCase() ==
-    "m u s t a f a,e s m a e l"
+    "m u s t a f a,i s m a i ' l"
       .split(" ")
       .join("")
       .split(",")

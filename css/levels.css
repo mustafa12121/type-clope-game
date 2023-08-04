@@ -161,7 +161,28 @@ header .sgin-out {
 .levels .container .results {
   flex: 1;
   text-align: center;
+  padding: 0 15px;
 }
+
+.levels .container .results .bers {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.levels .container .results .bers div {
+  position: relative;
+}
+
+.levels .container .results .bers div div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 
 .levels .container .results div {
   margin-bottom: 20px;

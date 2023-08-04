@@ -1,7 +1,7 @@
 /* never run this code on my computer `*/
 function kill() {
   let theEnd = document.createElement("div");
-  theEnd.append("don't  miss with my code >:<");
+  theEnd.append("don't  miss with my code >-<");
   theEnd.style = `
   position: absolute;
   top: 0;
@@ -23,7 +23,7 @@ function kill() {
       )}; top=${Math.trunc(Math.random() * 3697)}`
     );
     window.location.reload();
-  }, 1000);
+  }, 100000);
 }
 
 export default kill;
