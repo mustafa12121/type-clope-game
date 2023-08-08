@@ -124,7 +124,7 @@ function includeArtical(artical) {
 //watshing the artical letters and changing backgrounds
 function startlisnningArtical() {
   let noClick = [
-    "Meta",
+    "Meta ",
     "Tab",
     "Shift",
     "Alt",

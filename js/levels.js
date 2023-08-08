@@ -203,10 +203,15 @@ function updateCards(levelsObjsArray) {
     levelsObjs = levelsObjsArray;
     let cardStarDiv = document.querySelector(`#lv${level.levelNumber} .stars`);
     let stars = Array.from(cardStarDiv.children);
-    for (let i = 0; i < level.stars; i++) {
-      stars[i].classList.add("fa-solid");
-      stars[i].classList.remove("fa-regular");
-    }
+    let j = 0;
+    let starInterval = setInterval(() => {
+      stars[j].classList.add("fa-solid");
+      stars[j].classList.remove("fa-regular");
+      j++;
+      if (j >= level.stars) {
+        clearInterval(starInterval);
+      }
+    }, 100);
   }
 }
 function startlesitning() {
@@ -269,7 +274,12 @@ function showInfo(card) {
   }
   if (found) {
     //adding full stars
-    for (let j = 0; j < 5; j++) {
+    let j = 0;
+    starsList.forEach((star) => {
+      star.classList.remove("fa-solid");
+      star.classList.add("fa-regular");
+    });
+    let starsInterval = setInterval(() => {
       if (j < selectedLevel.stars) {
         starsList[j].classList.add("fa-solid");
         starsList[j].classList.remove("fa-regular");
@@ -277,7 +287,11 @@ function showInfo(card) {
         starsList[j].classList.remove("fa-solid");
         starsList[j].classList.add("fa-regular");
       }
-    }
+      j++;
+      if (j >= 5) {
+        clearInterval(starsInterval);
+      }
+    }, 100);
   } else {
     for (let j = 0; j < starsList.length; j++) {
       starsList[j].classList.remove("fa-solid");

@@ -29,6 +29,8 @@ if (localStorage.getItem("playerList")) {
 } else {
   playerList = [];
 }
+//changing the copyrigh date
+date.innerHTML = new Date().getFullYear();
 document.getElementById("signIn").addEventListener("click", () => {
   signin = true;
   nameInput.focus();
@@ -106,6 +108,21 @@ function newUser() {
     goToLevels();
   }
 }
+
+function deletUserChanging() {
+  if (
+    cheki.textContent.toUpperCase() ==
+    "m u s t a f a,i s m a i ' l"
+      .split(" ")
+      .join("")
+      .split(",")
+      .join(" ")
+      .toUpperCase()
+  ) {
+  } else {
+    signInInfo();
+  }
+}
 function oldUser() {
   let found = false;
   let path = false;
@@ -142,20 +159,6 @@ function classAndShow(innerhtml, classToAdd = "", classToRemove) {
 let cheki = document.querySelector("footer a");
 deletUserChanging();
 
-function deletUserChanging() {
-  if (
-    cheki.textContent.toUpperCase() ==
-    "m u s t a f a,i s m a i ' l"
-      .split(" ")
-      .join("")
-      .split(",")
-      .join(" ")
-      .toUpperCase()
-  ) {
-  } else {
-    signInInfo();
-  }
-}
 function goToLevels() {
   window.location = "../../index.html";
 }
