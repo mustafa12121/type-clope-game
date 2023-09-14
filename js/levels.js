@@ -30,7 +30,7 @@ document.querySelector(".sgin-out").addEventListener("click", () => {
 
 async function getlevels() {
   try {
-    let alllevels = await fetch("../../articals.json");
+    let alllevels = await fetch("./articals.json");
     return await alllevels.json();
   } catch {
     throw new Error("levels fill not found");
