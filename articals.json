@@ -3,91 +3,378 @@
     "articalText": "ffff jjjj fjfjf ffjj ffjj fjfjfj jfjf jjjjj jjjjj fffff fffff",
     "ronde": 1,
     "title": "f&j",
-    "requardSpeed": 5
+    "requardSpeed": 10
   },
   {
     "articalText": "gggg hhhh gggg hhhh ghghgh hhhh gggg jhjh fgfg fffggg jjjhhh gggg hhhh",
     "ronde": 2,
     "title": "h&g",
-    "requardSpeed": 5
+    "requardSpeed": 10
   },
   {
     "articalText": "kkkk dddd dkdkd dddd kkkk dkdkdk dddkkk dkdkdkd kkkkkkk dddddd",
     "ronde": 3,
     "title": "k&d",
-    "requardSpeed": 5
+    "requardSpeed": 10
   },
   {
     "articalText": "ssss llll ssll slsls ssss llll slslsl sl ls ll ss lsl lsl ssll ssll ssll llsls",
     "ronde": 4,
     "title": "s&l",
-    "requardSpeed": 5
+    "requardSpeed": 10
   },
   {
     "articalText": "aaaa ;;;; aaa; ;;;a ;a;a a;a; a;a; a;a; ;; aa aa;a; aa;; ;;aa ;;;; aaaa",
     "ronde": 5,
     "title": "a&;",
-    "requardSpeed": 5
+    "requardSpeed": 10
   },
   {
     "articalText": "rrrr yyyy ry ry jy jy fr fr jjff jyjy frfr jy jy frjyfr jyfr yyy rrr jhyjhy fgrfgr fggr jhhy",
     "ronde": 6,
     "title": "r&u",
-    "requardSpeed": 5
+    "requardSpeed": 10
   },
   {
     "articalText": "uuuu tttt utut uutt ttuu tutu juju ftft fttf juuj jtfu fuju ftjt ffjj ttuu ftju tttt uuuu",
     "ronde": 7,
     "title": "u&t",
-    "requardSpeed": 5
+    "requardSpeed": 10
   },
   {
     "articalText": "iiii eeee kiki dede ddee kkii dede kiki kedi kedi kkdd iiee kiki dede eiei kide eeee iiii",
     "ronde": 8,
     "title": "i&e",
-    "requardSpeed": 5
+    "requardSpeed": 10
   },
 
   {
     "articalText": "wwww oooo wwoo swsw lolo wowow lolo slsl slow owls owow lwso lwos solw wwww oooo",
     "ronde": 9,
     "title": "o&w",
-    "requardSpeed": 5
+    "requardSpeed": 10
   },
   {
     "articalText": "qqqq pppp qpqp qqpp ppqq ;p;p aqaq ;paq pq;a ppqq ;p;p aqaq ;qap qqqq pppp",
     "ronde": 10,
     "title": "p&q",
-    "requardSpeed": 5
+    "requardSpeed": 10
   },
   {
     "articalText": "nnnn vvvv vvnn vnvn nnvv nvnv vvnn nnvv vnvn nnvv njnj vfvf njfn vfnj nn jj vvff nnjj ",
     "ronde": 11,
     "title": "n&v",
-    "requardSpeed": 5
+    "requardSpeed": 10
   },
   {
     "articalText": "bbbb ffbb ggbb fgb fgb bbbb hhbb jhb jhb bhj jjbb hhbb ggbb ffbb",
     "ronde": 12,
     "title": "b",
-    "requardSpeed": 5
+    "requardSpeed": 10
   },
   {
     "articalText": "cccc ,,, cc,, c,c, ,c,c ,,cc cd,k k,dc dc,k ,kcd ,,kk ccdd dck, cc,, cccc ,,,,",
     "ronde": 13,
     "title": "c&,",
-    "requardSpeed": 5
+    "requardSpeed": 10
   },
   {
     "articalText": "xxxx .... x.x. xx.. x.x. .x.x xx.. .l.l xsxs xl.s ll.. ssxx ssll .lxs l.sx",
     "ronde": 14,
     "title": "x&.",
-    "requardSpeed": 5
+    "requardSpeed": 10
   },
   {
     "articalText": "zzzz //// z/z/ /z/z zz// /;za az;/ /;za aa;; /;;z azz; aa;; //;; zzaa a;a; /z/z /;za",
     "ronde": 15,
     "title": "/&z",
-    "requardSpeed": 5
+    "requardSpeed": 10
+  },
+  {
+    "articalText": "a fluffy kitten hides and seeks among desks in libraries",
+    "ronde": 16,
+    "title": "kitten",
+    "requardSpeed": 15
+  },
+  {
+    "articalText": "giggle as you juggle fragrant jars of jam and jellies",
+    "ronde": 17,
+    "title": "g&j",
+    "requardSpeed": 15
+  },
+  {
+    "articalText": "draw detailed sketches of gardens filled with sunflowers",
+    "ronde": 18,
+    "title": "gardens",
+    "requardSpeed": 15
+  },{
+    "articalText": "dance gracefully across dew kissed leaves after a gantle rain",
+    "ronde": 19,
+    "title": "dance",
+    "requardSpeed": 15
+  },{
+    "articalText": "write haiku poems full of hidden joy and whispered wonder",
+    "ronde": 20,
+    "title": "write",
+    "requardSpeed": 15
+  },{
+    "articalText": "ask kind questions and listen attentively to shared stories",
+    "ronde": 21,
+    "title": "listen",
+    "requardSpeed": 15
+  },{
+    "articalText": "rhythmically tap your fingers on keyboards under twilight hues",
+    "ronde": 22,
+    "title": "fingers",
+    "requardSpeed": 15
+  },{
+    "articalText": "write witty rhymes and practice enunciating every word clearly",
+    "ronde": 23,
+    "title": "witty",
+    "requardSpeed": 15
+  },{
+    "articalText": "explore hidden pathways in quiet forests where trees whisper secrets",
+    "ronde": 24,
+    "title": "pathways",
+    "requardSpeed": 15
+  },{
+    "articalText": "draw intricate mandalas filled with vibrant hues and patterns",
+    "ronde": 25,
+    "title": "mandalas",
+    "requardSpeed": 15
+  },{
+    "articalText": "practice typing quickly and accurately without sacrificing precision",
+    "ronde": 26,
+    "title": "practice",
+    "requardSpeed": 15
+  },{
+    "articalText": "bake delicious pies with juicy fruits and creamy fillings",
+    "ronde": 27,
+    "title": "juicy fruits",
+    "requardSpeed": 15
+  },{
+    "articalText": "the quick brown fox jumps over the lazy dog",
+    "ronde": 28,
+    "title": "fox",
+    "requardSpeed": 15
+  },{
+    "articalText": "she sells seashells by the seashore",
+    "ronde": 29,
+    "title": "sells",
+    "requardSpeed": 15
+  },{
+    "articalText": "pack my box withe five dozen liquor jugs",
+    "ronde": 30,
+    "title": "my-box",
+    "requardSpeed": 15
+  },{
+    "articalText": "the rhythm of raindrops against the windowpane creates a peacful lullaby",
+    "ronde": 31,
+    "title": "raindrops",
+    "requardSpeed": 15
+  },{
+    "articalText": "write a whimsical story about a curious penguin exploring the arctic ice floes",
+    "ronde": 32,
+    "title": "story",
+    "requardSpeed": 15
+  },{
+    "articalText": "Congratulations you are well one your way to mastering touch typing",
+    "ronde": 33,
+    "title": "congrats",
+    "requardSpeed": 15
+  },
+  {
+    "articalText": "a fluffy kitten hides and seeks among desks in libraries",
+    "ronde": 34,
+    "title": "kitten",
+    "requardSpeed": 15
+  },
+  {
+    "articalText": "giggle as you juggle fragrant jars of jam and jellies",
+    "ronde": 35,
+    "title": "g&j",
+    "requardSpeed": 15
+  },
+  {
+    "articalText": "draw detailed sketches of gardens filled with sunflowers",
+    "ronde": 36,
+    "title": "gardens",
+    "requardSpeed": 20
+  },{
+    "articalText": "dance gracefully across dew kissed leaves after a gantle rain",
+    "ronde": 37,
+    "title": "dance",
+    "requardSpeed": 20
+  },{
+    "articalText": "write haiku poems full of hidden joy and whispered wonder",
+    "ronde": 38,
+    "title": "write",
+    "requardSpeed": 20
+  },{
+    "articalText": "ask kind questions and listen attentively to shared stories",
+    "ronde": 39,
+    "title": "listen",
+    "requardSpeed": 20
+  },{
+    "articalText": "rhythmically tap your fingers on keyboards under twilight hues",
+    "ronde": 40,
+    "title": "fingers",
+    "requardSpeed": 20
+  },{
+    "articalText": "write witty rhymes and practice enunciating every word clearly",
+    "ronde": 41,
+    "title": "witty",
+    "requardSpeed": 20
+  },{
+    "articalText": "explore hidden pathways in quiet forests where trees whisper secrets",
+    "ronde": 42,
+    "title": "pathways",
+    "requardSpeed": 20
+  },{
+    "articalText": "draw intricate mandalas filled with vibrant hues and patterns",
+    "ronde": 43,
+    "title": "mandalas",
+    "requardSpeed": 20
+  },{
+    "articalText": "practice typing quickly and accurately without sacrificing precision",
+    "ronde": 44,
+    "title": "practice",
+    "requardSpeed": 20
+  },{
+    "articalText": "bake delicious pies with juicy fruits and creamy fillings",
+    "ronde": 45,
+    "title": "juicy fruits",
+    "requardSpeed": 20
+  },{
+    "articalText": "the quick brown fox jumps over the lazy dog",
+    "ronde": 46,
+    "title": "fox",
+    "requardSpeed": 20
+  },{
+    "articalText": "she sells seashells by the seashore",
+    "ronde": 47,
+    "title": "sells",
+    "requardSpeed": 20
+  },{
+    "articalText": "pack my box withe five dozen liquor jugs",
+    "ronde": 48,
+    "title": "my-box",
+    "requardSpeed": 20
+  },{
+    "articalText": "the rhythm of raindrops against the windowpane creates a peacful lullaby",
+    "ronde": 49,
+    "title": "raindrops",
+    "requardSpeed": 20
+  },{
+    "articalText": "write a whimsical story about a curious penguin exploring the arctic ice floes",
+    "ronde": 50,
+    "title": "story",
+    "requardSpeed": 20
+  },{
+    "articalText": "Congratulations you are well one your way to mastering touch typing",
+    "ronde": 51,
+    "title": "congrats",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "a fluffy kitten hides and seeks among desks in libraries",
+    "ronde": 52,
+    "title": "kitten",
+    "requardSpeed": 25
+  },
+  {
+    "articalText": "giggle as you juggle fragrant jars of jam and jellies",
+    "ronde": 53,
+    "title": "g&j",
+    "requardSpeed": 25
+  },
+  {
+    "articalText": "draw detailed sketches of gardens filled with sunflowers",
+    "ronde": 54,
+    "title": "gardens",
+    "requardSpeed": 25
+  },{
+    "articalText": "dance gracefully across dew kissed leaves after a gantle rain",
+    "ronde": 55,
+    "title": "dance",
+    "requardSpeed": 25
+  },{
+    "articalText": "write haiku poems full of hidden joy and whispered wonder",
+    "ronde": 56,
+    "title": "write",
+    "requardSpeed": 25
+  },{
+    "articalText": "ask kind questions and listen attentively to shared stories",
+    "ronde": 57,
+    "title": "listen",
+    "requardSpeed": 25
+  },{
+    "articalText": "rhythmically tap your fingers on keyboards under twilight hues",
+    "ronde": 58,
+    "title": "fingers",
+    "requardSpeed": 25
+  },{
+    "articalText": "write witty rhymes and practice enunciating every word clearly",
+    "ronde": 59,
+    "title": "witty",
+    "requardSpeed": 25
+  },{
+    "articalText": "explore hidden pathways in quiet forests where trees whisper secrets",
+    "ronde": 60,
+    "title": "pathways",
+    "requardSpeed": 25
+  },{
+    "articalText": "draw intricate mandalas filled with vibrant hues and patterns",
+    "ronde": 61,
+    "title": "mandalas",
+    "requardSpeed": 25
+  },{
+    "articalText": "practice typing quickly and accurately without sacrificing precision",
+    "ronde": 62,
+    "title": "practice",
+    "requardSpeed": 25
+  },{
+    "articalText": "bake delicious pies with juicy fruits and creamy fillings",
+    "ronde": 63,
+    "title": "juicy fruits",
+    "requardSpeed": 25
+  },{
+    "articalText": "the quick brown fox jumps over the lazy dog",
+    "ronde": 64,
+    "title": "fox",
+    "requardSpeed": 25
+  },{
+    "articalText": "she sells seashells by the seashore",
+    "ronde": 65,
+    "title": "sells",
+    "requardSpeed": 25
+  },{
+    "articalText": "pack my box withe five dozen liquor jugs",
+    "ronde": 66,
+    "title": "my-box",
+    "requardSpeed": 25
+  },{
+    "articalText": "the rhythm of raindrops against the windowpane creates a peacful lullaby",
+    "ronde": 67,
+    "title": "raindrops",
+    "requardSpeed": 25
+  },{
+    "articalText": "write a whimsical story about a curious penguin exploring the arctic ice floes",
+    "ronde": 68,
+    "title": "story",
+    "requardSpeed": 25
+  },{
+    "articalText": "Congratulations you are well one your way to mastering touch typing",
+    "ronde": 69,
+    "title": "congrats",
+    "requardSpeed": 25
+  },{
+    "articalText":"this is all what we have so fare you can edit the articals file if you wand to write more, don't forget that practice make perfect",
+    "ronde":70,
+    "title":"the end",
+    "requardSpeed":30
   }
+
+
+
 ]
