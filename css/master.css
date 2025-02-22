@@ -113,11 +113,14 @@ section .words {
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
 }
+section span{
+  display: inline-block;
+  margin-bottom: 8px;
+}
 section .words .space {
   width: 13px;
-  display: inline-block;
-  height: 33px;
-  margin-bottom: -7px;
+  height: 48px;
+  margin-bottom: -15px;
 }
 .keybord {
   background-color: white;

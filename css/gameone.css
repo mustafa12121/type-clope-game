@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('../imgs/clode.jfif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.balonce {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.balonce span {
+    margin: 0 20px; /* Adjusted to achieve around 20px space between spans */
+    width: 130px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%; /* Egg shape */
+    font-size: 24px; /* Increase the size of the spans */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.balonce span::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Start from the bottom of the balloon */
+    bottom: auto; /* Remove the bottom property */
+    left: 50%;
+    width: 2px;
+    height: 100px; /* Adjust the length of the string */
+    background-color: black; /* Color of the string */
+    transform: translateX(-50%);
+}
