@@ -13,7 +13,7 @@ let cardsContianer = document.querySelector(".cards"),
 subPass = document.querySelector(".leyout div input[type='submit']");
 
 if (!localStorage.getItem("corentPlayer")) {
-  window.location.href = "./bags/html/sign.html";
+  window.location.href = "/bags/sign.html";
 } else {
   userObj = JSON.parse(localStorage.getItem("corentPlayer"));
 }
@@ -30,7 +30,7 @@ document.querySelector(".sgin-out").addEventListener("click", () => {
 
 async function getlevels() {
   try {
-    let alllevels = await fetch("./articals.json");
+    let alllevels = await fetch("/articals.json");
     return await alllevels.json();
   } catch {
     throw new Error("levels fill not found");
@@ -152,7 +152,7 @@ function createLevelCard(title, ronde, requardSpeed) {
   infoInnerDiv.appendChild(speedSpan);
   info.appendChild(infoInnerDiv);
   card.appendChild(info);
-  //creating level spars icon
+  //creating level stars icon
   let stars = document.createElement("div");
   for (let i = 0; i < 5; i++) {
     let star = document.createElement("i");
@@ -220,7 +220,7 @@ function startlesitning() {
     card.addEventListener("dblclick", () => {
       localStorage.setItem("courentLevel", +noumber - 1);
       localStorage.setItem("destenation", "type");
-      location.href = "./bags/html/loading.html";
+      location.href = "/bags/loading.html";
     });
     card.addEventListener("click", () => {
       showInfo(card);
@@ -242,7 +242,7 @@ function changInput(icon, input) {
 
 function signOut() {
   updateLocal();
-  location.href = "./bags/html/sign.html";
+  location.href = "/bags/sign.html";
 }
 
 function deletAccount(player) {

@@ -35,7 +35,7 @@ if (!levelFond) {
 
 async function getwords() {
   try {
-    let jsonObj = await fetch("../../articals.json");
+    let jsonObj = await fetch("/articals.json");
     let articalsObjArray = await jsonObj.json();
     return articalsObjArray[level];
   } catch {
@@ -300,5 +300,5 @@ function endGame() {
   localStorage.setItem("corentPlayer", JSON.stringify(userObj));
   localStorage.setItem("gameInfo", JSON.stringify(gameInfo));
   localStorage.setItem("destenation", "levels");
-  location.href = "./loading.html";
+  location.href = "/bags/loading.html";
 }

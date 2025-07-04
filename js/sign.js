@@ -160,5 +160,5 @@ let cheki = document.querySelector("footer a");
 deletUserChanging();
 
 function goToLevels() {
-  window.location = "../../index.html";
+  window.location = "/index.html";
 }
