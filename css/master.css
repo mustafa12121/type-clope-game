@@ -113,7 +113,7 @@ section .words {
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
 }
-section span{
+section span {
   display: inline-block;
   margin-bottom: 8px;
 }
@@ -173,8 +173,8 @@ section .words .space {
 .keybord span span.home-row {
   width: 50%;
   position: absolute;
-  height: 3px;
-  bottom: 2px;
+  height: 2px;
+  bottom: -5px;
   align-self: center;
   left: 9px;
   background: #777;

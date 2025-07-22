@@ -1,3 +1,29 @@
+/**
+ * Typing Game Main Logic
+ *
+ * This file contains the main logic for the typing game, including:
+ * - Level and user management
+ * - Article loading and rendering
+ * - Keyboard UI and event handling
+ * - Game progress tracking and scoring
+ */
+
+/**
+ * DOM and game state variables
+ *
+ * - wordsContainer: Container for article letters
+ * - articalLetters: Array of letter elements for the current article
+ * - corentletter: Index of the current letter being typed
+ * - level: Current level number from localStorage
+ * - requardSpeed: Required WPM for the current level
+ * - seconds: Timer for tracking typing duration
+ * - time: Interval timer reference
+ * - userObj: Current user object from localStorage
+ * - levelObj: Current level object for the user
+ * - gameInfo: Array of all users and their progress
+ * - levelFond: Flag indicating if the level was found for the user
+ * - iIndex: Index of the current user in gameInfo
+ */
 let wordsContainer = document.querySelector(".words"),
   articalLetters,
   corentletter = 0,
@@ -11,6 +37,12 @@ let wordsContainer = document.querySelector(".words"),
 let levelFond = false,
   iIndex;
 
+/**
+ * Find or create the current level object for the user.
+ *
+ * - Searches gameInfo for the current user and level.
+ * - If not found, creates a new level object and adds it to the user.
+ */
 for (let i = 0; i < gameInfo.length; i++) {
   if (gameInfo[i].userName == userObj.userName) {
     for (let j = 0; j < gameInfo[i].levels.length; j++) {
@@ -22,6 +54,7 @@ for (let i = 0; i < gameInfo.length; i++) {
     iIndex = i;
   }
 }
+// If the level was not found, create a new one for the user
 if (!levelFond) {
   levelObj = {
     levelNumber: +level + 1,
@@ -33,6 +66,10 @@ if (!levelFond) {
   gameInfo[iIndex].levels.push(levelObj);
 }
 
+/**
+ * Fetches the article for the current level from articals.json.
+ * @returns {Promise<Object>} The article object for the current level.
+ */
 async function getwords() {
   try {
     let jsonObj = await fetch("/articals.json");
@@ -43,6 +80,7 @@ async function getwords() {
   }
 }
 
+// Load the article and initialize the game state for the current level
 getwords().then((artical) => {
   includeArtical(artical);
   articalLetters = Array.from(wordsContainer.children);
@@ -54,7 +92,11 @@ getwords().then((artical) => {
   startContingSpeed();
 });
 
-//showing and hiding the keyboard
+/**
+ * Keyboard show/hide toggle logic
+ *
+ * - Toggles the visibility of the on-screen keyboard when the switch is clicked.
+ */
 let keyboradSuitch = document.querySelector("#keyOnOff");
 keyboradSuitch.onclick = function () {
   if (this.classList.contains("icon-on")) {
@@ -67,8 +109,12 @@ keyboradSuitch.onclick = function () {
     keybord.style = "display:flex";
   }
 };
-//adding the keyboard keys
-
+/**
+ * Adds the keyboard keys to the on-screen keyboard.
+ *
+ * - Creates key elements for each character.
+ * - Adds special keys (Tab, Backspace, CapsLock, Shift, Enter, Space).
+ */
 let keybord = document.querySelector("#keybord");
 let keys = Array.from("`1234567890-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./");
 for (let i = 0; i < keys.length; i++) {
@@ -96,6 +142,14 @@ space.setAttribute("data-key", " ");
 space.classList.add("key-shadow-out");
 keybord.appendChild(space);
 
+/**
+ * Creates and inserts a special key into the keyboard.
+ *
+ * @param {string} innerValue - Display value for the key
+ * @param {string} dataValue - Data-key attribute value
+ * @param {string} targetDataValue - Key to insert before/after
+ * @param {boolean} befor - If true, insert before; else, after
+ */
 function creatkey(innerValue, dataValue, targetDataValue, befor = true) {
   let key = document.createElement("span");
   key.append(innerValue);
@@ -109,6 +163,11 @@ function creatkey(innerValue, dataValue, targetDataValue, befor = true) {
   }
 }
 
+/**
+ * Renders the article text as individual letter spans in the words container.
+ *
+ * @param {Object} artical - The article object containing articalText
+ */
 function includeArtical(artical) {
   let letters = Array.from(artical.articalText);
   for (let i = 0; i < letters.length; i++) {
@@ -121,7 +180,13 @@ function includeArtical(artical) {
     wordsContainer.appendChild(span);
   }
 }
-//watshing the artical letters and changing backgrounds
+/**
+ * Listens for keyboard events and updates the article letter states.
+ *
+ * - Handles typing, backspace, and wrong key logic.
+ * - Prevents browser search bar on "/" key.
+ * - Calls endGame() when the last letter is reached.
+ */
 function startlisnningArtical() {
   let noClick = [
     "Meta ",
@@ -134,9 +199,13 @@ function startlisnningArtical() {
     "CapsLock",
   ];
   onkeydown = (ev) => {
+    // Prevent browser search bar on "/" key
+    if (ev.key === "/") {
+      ev.preventDefault();
+    }
     if (!noClick.includes(ev.key)) {
       if (ev.key == "Backspace") {
-        //previent running out of the array
+        // Prevent running out of the array
         if (corentletter - 1 < 0) corentletter = 0;
         else corentletter--;
         if (articalLetters[corentletter].classList.contains("right")) {
@@ -152,13 +221,13 @@ function startlisnningArtical() {
         } else {
           articalLetters[corentletter].classList.add("right");
         }
-        //game ending
+        // Game ending
         if (corentletter === articalLetters.length - 1) {
           endGame();
         } else corentletter++;
       } else {
         articalLetters[corentletter].classList.add("wrong");
-        //game ending
+        // Game ending
         if (corentletter === articalLetters.length - 1) {
           endGame();
         } else corentletter++;
@@ -166,13 +235,23 @@ function startlisnningArtical() {
     }
   };
 }
+
+/**
+ * Tracks whether the Shift key is currently active.
+ */
 let notShift = true;
 
+/**
+ * Listens for keyboard events and updates the on-screen keyboard UI.
+ *
+ * - Highlights the current key.
+ * - Handles Shift key logic.
+ */
 function startlisnningKeybord() {
   let keys = Array.from(keybord.children);
   shickKeys(keys);
 
-  document.addEventListener("keyup", () => {
+  document.addEventListener("keyup", (e) => {
     notShift = true;
     shickKeys(keys);
     if (notShift) {
@@ -181,6 +260,11 @@ function startlisnningKeybord() {
   });
 }
 
+/**
+ * Animates a key to visually indicate a key press.
+ *
+ * @param {HTMLElement} ele - The key element to animate
+ */
 function blinck(ele) {
   if (ele.classList.contains("courent")) {
     ele.classList.remove("key-shadow-out");
@@ -192,6 +276,11 @@ function blinck(ele) {
   }
 }
 
+/**
+ * Highlights the current key and handles Shift key logic for the on-screen keyboard.
+ *
+ * @param {HTMLElement[]} keys - Array of key elements
+ */
 function shickKeys(keys) {
   keys.forEach((ele) => {
     if (ele.dataset.key == articalLetters[corentletter].dataset.key) {
@@ -211,10 +300,17 @@ function shickKeys(keys) {
       addShift(ele, keys);
       notShift = false;
     } else {
+      // No shift needed
     }
   });
 }
 
+/**
+ * Highlights the appropriate Shift key for uppercase or special characters.
+ *
+ * @param {HTMLElement} ele - The key element
+ * @param {HTMLElement[]} keysArray - Array of key elements
+ */
 function addShift(ele, keysArray) {
   let rightShiftKeys = Array.from("qwertasdfgzxcvb~!@#$%");
   let shifts = keysArray.filter((val) => {
@@ -228,6 +324,9 @@ function addShift(ele, keysArray) {
   }
 }
 
+/**
+ * Removes highlight from all Shift keys.
+ */
 function removeShift() {
   document.querySelectorAll("[data-key='Shift']").forEach((ele) => {
     blinck(ele);
@@ -235,23 +334,45 @@ function removeShift() {
   });
 }
 
+/**
+ * Starts the timer for tracking typing speed.
+ */
 function startContingSpeed() {
   time = setInterval(() => {
     seconds += 0.1;
   }, 100);
 }
 
+/**
+ * Ends the typing game, calculates performance, updates user progress, and redirects to the loading screen.
+ *
+ * - Stops the timer.
+ * - Calculates Words Per Minute (WPM) using the standard formula: (characters / 5) / (minutes).
+ * - Counts the number of wrong letters.
+ * - Calculates the performance percent based on speed and accuracy.
+ * - Updates stars, percent, highest speed, and wrong letters for the current level.
+ * - Saves progress to localStorage and redirects to the next screen.
+ */
 function endGame() {
+  // Stop the timer
   clearInterval(time);
+
+  // Calculate WPM: (characters / 5) / (minutes)
   let wpm = Math.floor(
-    (60 / seconds) * wordsContainer.textContent.split(" ").length
+    (seconds / 60) * (wordsContainer.textContent.length / 5)
   );
+
+  // Count wrong letters
   let wrong = articalLetters.filter((ele) => {
     return ele.classList.contains("wrong");
   }).length;
+
+  // Start with 100% performance
   let percent = 100;
-  //conting the speed percent
+
+  // Deduct percent based on speed
   if (wpm >= requardSpeed) {
+    // Full percent if required speed is met
   } else if (wpm >= (requardSpeed / 5) * 4) {
     percent -= 10;
   } else if (wpm >= (requardSpeed / 5) * 3) {
@@ -261,7 +382,8 @@ function endGame() {
   } else if (wpm >= requardSpeed / 5) {
     percent -= 40;
   }
-  //conting the wrongs percent
+
+  // Deduct percent based on number of wrong letters
   if (wrong >= articalLetters.length) {
     percent -= 50;
   } else if (wrong >= Math.round(articalLetters.length / 5) * 4) {
@@ -273,21 +395,28 @@ function endGame() {
   } else if (wrong >= Math.round(articalLetters.length / 5)) {
     percent -= 10;
   }
-  //conting the stars from the percent
 
+  // Update level stats if performance improved
   if (levelObj.percent <= percent) {
+    // Update stars based on percent (1 star per 20%)
     if (levelObj.stars < Math.trunc(percent / 20)) {
       levelObj.stars = Math.trunc(percent / 20);
     }
     levelObj.percent = percent;
+
+    // Unlock next level if percent > 60
     if (percent > 60) {
       if (userObj.lastlevel < +levelObj.levelNumber + 1) {
         userObj.lastlevel = +levelObj.levelNumber + 1;
       }
     }
+
+    // Update highest speed if new WPM is greater
     if (levelObj.heighestSpeed < wpm) {
       levelObj.heighestSpeed = wpm;
     }
+
+    // Update wrong letters (lowest value)
     if (levelFond) {
       if (levelObj.wrongLetters > wrong) {
         levelObj.wrongLetters = wrong;
@@ -297,8 +426,11 @@ function endGame() {
     }
   }
 
+  // Save progress to localStorage
   localStorage.setItem("corentPlayer", JSON.stringify(userObj));
   localStorage.setItem("gameInfo", JSON.stringify(gameInfo));
   localStorage.setItem("destenation", "levels");
+
+  // Redirect to loading screen
   location.href = "/bags/loading.html";
 }

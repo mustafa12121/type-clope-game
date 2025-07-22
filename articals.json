@@ -30,15 +30,15 @@
     "requardSpeed": 10
   },
   {
-    "articalText": "rrrr yyyy ry ry jy jy fr fr jjff jyjy frfr jy jy frjyfr jyfr yyy rrr jhyjhy fgrfgr fggr jhhy",
+    "articalText": "rrrr uuuu ru ru ju ju fr fr jjff juju frfr ju ju frjufr jufr uuu rrr jhujhu fgrfgr fggr jhhu",
     "ronde": 6,
     "title": "r&u",
     "requardSpeed": 10
   },
   {
-    "articalText": "uuuu tttt utut uutt ttuu tutu juju ftft fttf juuj jtfu fuju ftjt ffjj ttuu ftju tttt uuuu",
+    "articalText": "yyyy tttt ytyt yytt ttyy tyty jyjy ftft fttf jyyj jtfy fyjy ftjt ffjj ttyy ftjy tttt yyyy",
     "ronde": 7,
-    "title": "u&t",
+    "title": "y&t",
     "requardSpeed": 10
   },
   {
@@ -61,7 +61,7 @@
     "requardSpeed": 10
   },
   {
-    "articalText": "nnnn vvvv vvnn vnvn nnvv nvnv vvnn nnvv vnvn nnvv njnj vfvf njfn vfnj nn jj vvff nnjj ",
+    "articalText": "nnnn vvvv vvnn vnvn nnvv nvnv vvnn nnvv vnvn nnvv njnj vfvf njfn vfnj nn jj vvff nnjj",
     "ronde": 11,
     "title": "n&v",
     "requardSpeed": 10
@@ -107,77 +107,92 @@
     "ronde": 18,
     "title": "gardens",
     "requardSpeed": 15
-  },{
+  },
+  {
     "articalText": "dance gracefully across dew kissed leaves after a gantle rain",
     "ronde": 19,
     "title": "dance",
     "requardSpeed": 15
-  },{
+  },
+  {
     "articalText": "write haiku poems full of hidden joy and whispered wonder",
     "ronde": 20,
     "title": "write",
     "requardSpeed": 15
-  },{
+  },
+  {
     "articalText": "ask kind questions and listen attentively to shared stories",
     "ronde": 21,
     "title": "listen",
     "requardSpeed": 15
-  },{
+  },
+  {
     "articalText": "rhythmically tap your fingers on keyboards under twilight hues",
     "ronde": 22,
     "title": "fingers",
     "requardSpeed": 15
-  },{
+  },
+  {
     "articalText": "write witty rhymes and practice enunciating every word clearly",
     "ronde": 23,
     "title": "witty",
     "requardSpeed": 15
-  },{
+  },
+  {
     "articalText": "explore hidden pathways in quiet forests where trees whisper secrets",
     "ronde": 24,
     "title": "pathways",
     "requardSpeed": 15
-  },{
+  },
+  {
     "articalText": "draw intricate mandalas filled with vibrant hues and patterns",
     "ronde": 25,
     "title": "mandalas",
     "requardSpeed": 15
-  },{
+  },
+  {
     "articalText": "practice typing quickly and accurately without sacrificing precision",
     "ronde": 26,
     "title": "practice",
     "requardSpeed": 15
-  },{
+  },
+  {
     "articalText": "bake delicious pies with juicy fruits and creamy fillings",
     "ronde": 27,
     "title": "juicy fruits",
     "requardSpeed": 15
-  },{
+  },
+  {
     "articalText": "the quick brown fox jumps over the lazy dog",
     "ronde": 28,
     "title": "fox",
     "requardSpeed": 15
-  },{
+  },
+  {
     "articalText": "she sells seashells by the seashore",
     "ronde": 29,
     "title": "sells",
     "requardSpeed": 15
-  },{
+  },
+  {
     "articalText": "pack my box withe five dozen liquor jugs",
     "ronde": 30,
     "title": "my-box",
     "requardSpeed": 15
-  },{
+  },
+  {
     "articalText": "the rhythm of raindrops against the windowpane creates a peacful lullaby",
     "ronde": 31,
     "title": "raindrops",
     "requardSpeed": 15
-  },{
+  },
+  {
     "articalText": "write a whimsical story about a curious penguin exploring the arctic ice floes",
     "ronde": 32,
     "title": "story",
     "requardSpeed": 15
-  },{
+  },
+  {
     "articalText": "Congratulations you are well one your way to mastering touch typing",
     "ronde": 33,
     "title": "congrats",
@@ -200,77 +215,92 @@
     "ronde": 36,
     "title": "gardens",
     "requardSpeed": 20
-  },{
+  },
+  {
     "articalText": "dance gracefully across dew kissed leaves after a gantle rain",
     "ronde": 37,
     "title": "dance",
     "requardSpeed": 20
-  },{
+  },
+  {
     "articalText": "write haiku poems full of hidden joy and whispered wonder",
     "ronde": 38,
     "title": "write",
     "requardSpeed": 20
-  },{
+  },
+  {
     "articalText": "ask kind questions and listen attentively to shared stories",
     "ronde": 39,
     "title": "listen",
     "requardSpeed": 20
-  },{
+  },
+  {
     "articalText": "rhythmically tap your fingers on keyboards under twilight hues",
     "ronde": 40,
     "title": "fingers",
     "requardSpeed": 20
-  },{
+  },
+  {
     "articalText": "write witty rhymes and practice enunciating every word clearly",
     "ronde": 41,
     "title": "witty",
     "requardSpeed": 20
-  },{
+  },
+  {
     "articalText": "explore hidden pathways in quiet forests where trees whisper secrets",
     "ronde": 42,
     "title": "pathways",
     "requardSpeed": 20
-  },{
+  },
+  {
     "articalText": "draw intricate mandalas filled with vibrant hues and patterns",
     "ronde": 43,
     "title": "mandalas",
     "requardSpeed": 20
-  },{
+  },
+  {
     "articalText": "practice typing quickly and accurately without sacrificing precision",
     "ronde": 44,
     "title": "practice",
     "requardSpeed": 20
-  },{
+  },
+  {
     "articalText": "bake delicious pies with juicy fruits and creamy fillings",
     "ronde": 45,
     "title": "juicy fruits",
     "requardSpeed": 20
-  },{
+  },
+  {
     "articalText": "the quick brown fox jumps over the lazy dog",
     "ronde": 46,
     "title": "fox",
     "requardSpeed": 20
-  },{
+  },
+  {
     "articalText": "she sells seashells by the seashore",
     "ronde": 47,
     "title": "sells",
     "requardSpeed": 20
-  },{
+  },
+  {
     "articalText": "pack my box withe five dozen liquor jugs",
     "ronde": 48,
     "title": "my-box",
     "requardSpeed": 20
-  },{
+  },
+  {
     "articalText": "the rhythm of raindrops against the windowpane creates a peacful lullaby",
     "ronde": 49,
     "title": "raindrops",
     "requardSpeed": 20
-  },{
+  },
+  {
     "articalText": "write a whimsical story about a curious penguin exploring the arctic ice floes",
     "ronde": 50,
     "title": "story",
     "requardSpeed": 20
-  },{
+  },
+  {
     "articalText": "Congratulations you are well one your way to mastering touch typing",
     "ronde": 51,
     "title": "congrats",
@@ -293,88 +323,275 @@
     "ronde": 54,
     "title": "gardens",
     "requardSpeed": 25
-  },{
+  },
+  {
     "articalText": "dance gracefully across dew kissed leaves after a gantle rain",
     "ronde": 55,
     "title": "dance",
     "requardSpeed": 25
-  },{
+  },
+  {
     "articalText": "write haiku poems full of hidden joy and whispered wonder",
     "ronde": 56,
     "title": "write",
     "requardSpeed": 25
-  },{
+  },
+  {
     "articalText": "ask kind questions and listen attentively to shared stories",
     "ronde": 57,
     "title": "listen",
     "requardSpeed": 25
-  },{
+  },
+  {
     "articalText": "rhythmically tap your fingers on keyboards under twilight hues",
     "ronde": 58,
     "title": "fingers",
     "requardSpeed": 25
-  },{
+  },
+  {
     "articalText": "write witty rhymes and practice enunciating every word clearly",
     "ronde": 59,
     "title": "witty",
     "requardSpeed": 25
-  },{
+  },
+  {
     "articalText": "explore hidden pathways in quiet forests where trees whisper secrets",
     "ronde": 60,
     "title": "pathways",
     "requardSpeed": 25
-  },{
+  },
+  {
     "articalText": "draw intricate mandalas filled with vibrant hues and patterns",
     "ronde": 61,
     "title": "mandalas",
     "requardSpeed": 25
-  },{
+  },
+  {
     "articalText": "practice typing quickly and accurately without sacrificing precision",
     "ronde": 62,
     "title": "practice",
     "requardSpeed": 25
-  },{
+  },
+  {
     "articalText": "bake delicious pies with juicy fruits and creamy fillings",
     "ronde": 63,
     "title": "juicy fruits",
     "requardSpeed": 25
-  },{
+  },
+  {
     "articalText": "the quick brown fox jumps over the lazy dog",
     "ronde": 64,
     "title": "fox",
     "requardSpeed": 25
-  },{
+  },
+  {
     "articalText": "she sells seashells by the seashore",
     "ronde": 65,
     "title": "sells",
     "requardSpeed": 25
-  },{
+  },
+  {
     "articalText": "pack my box withe five dozen liquor jugs",
     "ronde": 66,
     "title": "my-box",
     "requardSpeed": 25
-  },{
+  },
+  {
     "articalText": "the rhythm of raindrops against the windowpane creates a peacful lullaby",
     "ronde": 67,
     "title": "raindrops",
     "requardSpeed": 25
-  },{
+  },
+  {
     "articalText": "write a whimsical story about a curious penguin exploring the arctic ice floes",
     "ronde": 68,
     "title": "story",
     "requardSpeed": 25
-  },{
+  },
+  {
     "articalText": "Congratulations you are well one your way to mastering touch typing",
     "ronde": 69,
     "title": "congrats",
     "requardSpeed": 25
-  },{
-    "articalText":"this is all what we have so fare you can edit the articals file if you wand to write more, don't forget that practice make perfect",
-    "ronde":70,
-    "title":"the end",
-    "requardSpeed":30
+  },
+  {
+    "articalText": "type with joy and focus as you reach new milestones in your typing journey, mastering each key with confidence and speed",
+    "ronde": 70,
+    "title": "milestones",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "jump over lazy dogs quickly and quietly while practicing your typing skills every day to improve speed and accuracy for better results in all your work tasks",
+    "ronde": 71,
+    "title": "jump dogs",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "bright stars twinkle in the night sky as you type each word with focus and determination, building muscle memory and confidence in your touch typing abilities",
+    "ronde": 72,
+    "title": "stars twinkle",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "type every word with perfect form and steady hands, making sure to keep your eyes on the screen and your fingers on the home row for best results",
+    "ronde": 73,
+    "title": "perfect form",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "quick hands make light work when you practice typing daily, so set aside time to improve your skills and watch your progress grow each week",
+    "ronde": 74,
+    "title": "quick hands",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "focus on accuracy before speed to ensure that your typing is both fast and correct, helping you avoid mistakes and build good habits for the future",
+    "ronde": 75,
+    "title": "focus accuracy",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "practice makes every typist better, so repeat your exercises and challenge yourself with new words and sentences to keep improving",
+    "ronde": 76,
+    "title": "practice better",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "keep your fingers on the home row and use the correct finger for each key, which will help you type faster and more accurately over time",
+    "ronde": 77,
+    "title": "home row",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "never look down at the keyboard while typing, instead trust your muscle memory and focus on the words appearing on the screen in front of you",
+    "ronde": 78,
+    "title": "no look",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "steady rhythm helps you type fast and accurately, so try to maintain a consistent pace and avoid rushing through your practice sessions",
+    "ronde": 79,
+    "title": "steady rhythm",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "rest your wrists and relax your mind between typing exercises to prevent fatigue and keep your hands healthy for long practice sessions",
+    "ronde": 80,
+    "title": "relax mind",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "each finger has its own job to do on the keyboard, so practice using all your fingers to type each letter and symbol with confidence",
+    "ronde": 81,
+    "title": "each finger",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "type with confidence and calm focus, knowing that every practice session brings you closer to mastering the art of touch typing",
+    "ronde": 82,
+    "title": "calm focus",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "short sentences are great for practice, but try longer ones too so you can build endurance and improve your typing speed over time",
+    "ronde": 83,
+    "title": "short sentences",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "move your hands smoothly and swiftly across the keyboard, making sure to use the correct finger for each key and keep your posture straight",
+    "ronde": 84,
+    "title": "move smoothly",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "press each key with gentle force and avoid pounding on the keyboard, which will help you type more quietly and reduce hand strain",
+    "ronde": 85,
+    "title": "gentle force",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "watch your progress and celebrate wins, no matter how small, because every improvement in your typing skills is a step forward",
+    "ronde": 86,
+    "title": "celebrate wins",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "mistakes are lessons for improvement, so do not be discouraged if you make errors while typing, just keep practicing and you will get better",
+    "ronde": 87,
+    "title": "mistakes lessons",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "challenge yourself with new words daily and try to type them as quickly and accurately as possible to build your vocabulary and speed",
+    "ronde": 88,
+    "title": "challenge daily",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "typing is a skill you can always grow, so keep learning new techniques and practicing regularly to become a true typing master",
+    "ronde": 89,
+    "title": "skill grow",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "every day brings a new chance to improve your typing skills and reach new goals with steady practice and focus on accuracy and speed",
+    "ronde": 91,
+    "title": "new chance",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "set a timer and challenge yourself to type as many words as you can without looking at the keyboard or making mistakes in your sentences",
+    "ronde": 92,
+    "title": "timer challenge",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "stretch your fingers before and after typing to keep your hands healthy and ready for more practice sessions every single day",
+    "ronde": 93,
+    "title": "stretch fingers",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "find your favorite typing music and let the rhythm help you keep a steady pace as you work through each level and lesson",
+    "ronde": 94,
+    "title": "typing music",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "review your progress at the end of each week and celebrate the improvements you have made in both speed and accuracy",
+    "ronde": 95,
+    "title": "review progress",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "invite a friend to join you in a typing race and see who can finish the level first with the fewest mistakes and the highest speed",
+    "ronde": 96,
+    "title": "typing race",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "try typing with different keyboard layouts to discover which one feels most comfortable and helps you reach your best performance",
+    "ronde": 97,
+    "title": "keyboard layout",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "read a short story and type it out from memory to test your recall and reinforce your touch typing skills in a fun way",
+    "ronde": 98,
+    "title": "story memory",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "keep your posture straight and your shoulders relaxed while typing to avoid fatigue and make your practice more enjoyable",
+    "ronde": 99,
+    "title": "good posture",
+    "requardSpeed": 30
+  },
+  {
+    "articalText": "this is all what we have so fare you can edit the articals file if you wand to write more, don't forget that practice make perfect",
+    "ronde": 100,
+    "title": "the end",
+    "requardSpeed": 30
   }
-
-
-
 ]

@@ -182,8 +182,6 @@ header .sgin-out {
   transform: translate(-50%, -50%);
 }
 
-
-
 .levels .container .results div {
   margin-bottom: 20px;
 }
@@ -219,11 +217,11 @@ header .sgin-out {
   color: white;
 }
 
-.delet+.leyout {
+.delet + .leyout {
   background-image: radial-gradient(red, transparent);
 }
 
-.delet+.leyout div {
+.delet + .leyout div {
   background-color: black;
 }
 

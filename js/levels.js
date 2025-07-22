@@ -1,3 +1,28 @@
+/**
+ * Levels Page Main Logic
+ *
+ * This file manages:
+ * - Level cards rendering and updating
+ * - User authentication and account management
+ * - Progress visualization (canvas)
+ * - UI event handling for sign out, delete, and info
+ */
+
+/**
+ * DOM and game state variables
+ *
+ * - cardsContianer: Container for level cards
+ * - level, speed, title: Current level info
+ * - gameInfo: Array of all users and their progress
+ * - cards: Array of card elements
+ * - userObj: Current user object
+ * - levelsObjs: Array of level objects for the user
+ * - playerList: List of all players
+ * - pass: Password input field
+ * - password: Current password value
+ * - showPass: Eye icon for password visibility
+ * - subPass: Submit button for password
+ */
 let cardsContianer = document.querySelector(".cards"),
   level,
   speed,
@@ -12,22 +37,35 @@ let cardsContianer = document.querySelector(".cards"),
   (showPass = document.getElementById("eye"));
 subPass = document.querySelector(".leyout div input[type='submit']");
 
+/**
+ * Redirects to sign-in page if no current user is found, otherwise loads user object.
+ */
 if (!localStorage.getItem("corentPlayer")) {
   window.location.href = "/bags/sign.html";
 } else {
   userObj = JSON.parse(localStorage.getItem("corentPlayer"));
 }
 
+/**
+ * Loads gameInfo from localStorage or initializes as empty array.
+ */
 if (localStorage.getItem("gameInfo")) {
   gameInfo = JSON.parse(localStorage.getItem("gameInfo"));
 } else {
   gameInfo = [];
 }
 
+/**
+ * Shows sign-out modal when sign-out button is clicked.
+ */
 document.querySelector(".sgin-out").addEventListener("click", () => {
   document.querySelector(".leyout").style.display = "flex";
 });
 
+/**
+ * Fetches all levels from articals.json.
+ * @returns {Promise<Array>} Array of level objects
+ */
 async function getlevels() {
   try {
     let alllevels = await fetch("/articals.json");
@@ -37,18 +75,23 @@ async function getlevels() {
   }
 }
 
+// Load levels and initialize UI
 getlevels().then((levelsList) => {
   levelsList.forEach((level) => {
     createLevelCard(level.title, level.ronde, level.requardSpeed);
   });
 
-  document.querySelector("#name").innerHTML = userObj.userName;
+  document.querySelector("#name").textContent = userObj.userName;
   cards = Array.from(cardsContianer.children);
   updateInfo();
   startlesitning();
 });
 
-//signout section
+/**
+ * Sign-out section logic
+ *
+ * - Handles password input, visibility toggle, and sign-out action.
+ */
 showPass.addEventListener("click", () => {
   changInput(showPass, pass);
 });
@@ -79,7 +122,11 @@ subPass.onclick = () => {
   }
 };
 
-//deleting section
+/**
+ * Account deletion section logic
+ *
+ * - Handles password input, visibility toggle, and delete action.
+ */
 document.querySelector(".delet").addEventListener("click", () => {
   document.querySelectorAll(".leyout")[1].style.display = "flex";
 });
@@ -112,11 +159,21 @@ deletingBotton.addEventListener("click", () => {
   }
 });
 
-//adding the canvas
+/**
+ * Adds and initializes the progress canvas for speed and accuracy.
+ */
 let can = document.querySelectorAll("canvas");
 druCanvas(0, can[0], 0);
 druCanvas(0, can[1], 0);
-//fuctionalty section
+
+// Functionality section
+/**
+ * Creates a level card and appends it to the cards container.
+ *
+ * @param {string} title - Level title
+ * @param {number} ronde - Level number
+ * @param {number} requardSpeed - Required WPM for the level
+ */
 function createLevelCard(title, ronde, requardSpeed) {
   let card = document.createElement("div");
   card.className = "card";
@@ -166,6 +223,12 @@ function createLevelCard(title, ronde, requardSpeed) {
   cardsContianer.appendChild(card);
 }
 
+/**
+ * Updates the user's level info and cards display.
+ *
+ * - Finds the user's levels in gameInfo.
+ * - Updates the cards and localStorage.
+ */
 function updateInfo() {
   let levelsInfoArray,
     oldUser = false;
@@ -186,6 +249,9 @@ function updateInfo() {
   updateLocal();
 }
 
+/**
+ * Updates localStorage with the latest gameInfo and playerList.
+ */
 function updateLocal() {
   let gameInfoToLocal = JSON.stringify(gameInfo);
   localStorage.setItem("gameInfo", gameInfoToLocal);
@@ -197,6 +263,11 @@ function updateLocal() {
   localStorage.setItem("playerList", JSON.stringify(playerList));
 }
 
+/**
+ * Updates the stars display for each level card based on user progress.
+ *
+ * @param {Array} levelsObjsArray - Array of level objects for the user
+ */
 function updateCards(levelsObjsArray) {
   for (let i = 0; i < levelsObjsArray.length; i++) {
     let level = levelsObjsArray[i];
@@ -214,6 +285,12 @@ function updateCards(levelsObjsArray) {
     }, 100);
   }
 }
+/**
+ * Adds event listeners to level cards for selection and navigation.
+ *
+ * - Double-click navigates to typing game for the level.
+ * - Single-click shows level info.
+ */
 function startlesitning() {
   cards.forEach((card) => {
     let noumber = card.id.match(/\d+/g).join("");
@@ -228,6 +305,12 @@ function startlesitning() {
   });
 }
 
+/**
+ * Toggles password input visibility.
+ *
+ * @param {HTMLElement} icon - Eye icon element
+ * @param {HTMLInputElement} input - Password input element
+ */
 function changInput(icon, input) {
   if (icon.classList.contains("fa-eye")) {
     input.type = "text";
@@ -240,11 +323,19 @@ function changInput(icon, input) {
   }
 }
 
+/**
+ * Signs out the user and redirects to sign-in page.
+ */
 function signOut() {
   updateLocal();
   location.href = "/bags/sign.html";
 }
 
+/**
+ * Deletes the user account and reloads the page.
+ *
+ * @param {Object} player - User object to delete
+ */
 function deletAccount(player) {
   playerList = deletPlayerInfo(player, playerList);
   gameInfo = deletPlayerInfo(player, gameInfo);
@@ -253,11 +344,23 @@ function deletAccount(player) {
   location.reload();
 }
 
+/**
+ * Removes a user from a list by username.
+ *
+ * @param {Object} player - User object to remove
+ * @param {Array} from - Array to remove user from
+ * @returns {Array} Filtered array
+ */
 function deletPlayerInfo(player, from) {
   return from.filter((obj) => {
     return obj.userName !== player.userName;
   });
 }
+/**
+ * Shows the selected level's information and updates the UI.
+ *
+ * @param {HTMLElement} card - Level card element
+ */
 //shoing the selected level information
 function showInfo(card) {
   let starsList = document.querySelectorAll("#starsGain i"),
@@ -325,6 +428,14 @@ function showInfo(card) {
   card.classList.add("selected");
 }
 
+/**
+ * Draws a circular progress bar on a canvas for speed or accuracy.
+ *
+ * @param {number} bers - Percent to fill (0-100)
+ * @param {HTMLCanvasElement} canvas - Canvas element to draw on
+ * @param {number} conter - Counter value to display
+ * @param {HTMLElement} [span] - Optional span to update with counter
+ */
 function druCanvas(bers, canvas, conter, span) {
   let newCanvas = document.createElement("canvas");
   newCanvas.setAttribute("width", canvas.width);
