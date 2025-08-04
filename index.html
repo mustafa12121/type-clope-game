@@ -1,71 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tato typing clope</title>
+    <link
+      rel="stylesheet"
+      href="./fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.ttf"
+    />
+    <link
+      rel="stylesheet"
+      href="./fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf"
+    />
+    <link rel="stylesheet" href="./fonts/Teko/Teko-Light.ttf" />
+    <link rel="stylesheet" href="./fonts/Teko/Teko-Bold.ttf" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/levels.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>tato typing clope</title>
-  <link rel="stylesheet" href="./fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.ttf" />
-  <link rel="stylesheet" href="./fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf" />
-  <link rel="stylesheet" href="./fonts/Teko/Teko-Light.ttf" />
-  <link rel="stylesheet" href="./fonts/Teko/Teko-Bold.ttf" />
-  <link rel="stylesheet" href="./css/all.min.css" />
-  <link rel="stylesheet" href="./css/levels.css" />
-</head>
-
-<body>
-  <div class="leyout">
-    <div>
-      <form action="">
-        <label for="pass">your password</label>
-        <input type="password" id="pass" /><i class="fa-solid fa-eye" id="eye"></i>
-        <input type="submit" value="logout" />
-      </form>
-    </div>
-  </div>
-  <header>
-    <div>Hello:<span id="name"></span></div>
-    <div class="sgin-out">sginOut <i class="fa-solid fa-user-slash"></i></div>
-  </header>
-  <div class="levels">
-    <div class="container">
-      <div class="cards"></div>
-      <div class="results">
-        <div class="stars">
-          stars
-          <span id="starsGain"><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
-              class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span>
-        </div>
-        <div class="bers">
-
-          <div class="folts-bers">
-            <canvas width="150" height="150"></canvas>
-            <div><span>0</span> WPM</div>
-          </div>
-
-          <div class="speed-bers">
-            <canvas width="150" height="150"></canvas>
-            <div><span>0</span> folt</div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="delet">delet account</div>
+  <body>
     <div class="leyout">
       <div>
-        <h3 style="text-align: center">this step can't be ando</h3>
         <form action="">
           <label for="pass">your password</label>
-          <input type="password" id="pass2" /><i class="fa-solid fa-eye" id="eye2"></i>
-          <input type="submit" value="delete" />
+          <input type="password" id="pass" /><i
+            class="fa-solid fa-eye"
+            id="eye"
+          ></i>
+          <input type="submit" value="logout" />
         </form>
       </div>
     </div>
-  </div>
-  <script src="./js/levels.js">
-  </script>
-</body>
+    <header>
+      <div>Hello:<span id="name"></span></div>
+      <div class="sgin-out">sginOut <i class="fa-solid fa-user-slash"></i></div>
+    </header>
+    <div class="levels">
+      <div class="container">
+        <div class="cards"></div>
+        <div class="results">
+          <div class="stars">
+            stars
+            <span id="starsGain"
+              ><i class="fa-regular fa-star"></i
+              ><i class="fa-regular fa-star"></i
+              ><i class="fa-regular fa-star"></i
+              ><i class="fa-regular fa-star"></i
+              ><i class="fa-regular fa-star"></i
+            ></span>
+          </div>
+          <div class="bers">
+            <div class="folts-bers">
+              <canvas width="150" height="150"></canvas>
+              <div><span>0</span> WPM</div>
+            </div>
 
+            <div class="speed-bers">
+              <canvas width="150" height="150"></canvas>
+              <div><span>0</span> folt</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="delet">delet account</div>
+      <div class="leyout">
+        <div>
+          <h3 style="text-align: center">this step can't be ando</h3>
+          <form action="">
+            <label for="pass">your password</label>
+            <input type="password" id="pass2" /><i
+              class="fa-solid fa-eye"
+              id="eye2"
+            ></i>
+            <input type="submit" value="delete" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./js/levels.js" type="module"></script>
+  </body>
 </html>

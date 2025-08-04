@@ -30,12 +30,12 @@ let cardsContianer = document.querySelector(".cards"),
   gameInfo,
   cards,
   userObj,
-  levelsObjs;
-(playerList = JSON.parse(localStorage.getItem("playerList"))),
-  (pass = document.getElementById("pass")),
-  (password = ""),
-  (showPass = document.getElementById("eye"));
-subPass = document.querySelector(".leyout div input[type='submit']");
+  levelsObjs,
+  playerList = JSON.parse(localStorage.getItem("playerList")),
+  pass = document.getElementById("pass"),
+  password = "",
+  showPass = document.getElementById("eye"),
+  subPass = document.querySelector(".leyout div input[type='submit']");
 
 /**
  * Redirects to sign-in page if no current user is found, otherwise loads user object.
@@ -295,7 +295,7 @@ function startlesitning() {
   cards.forEach((card) => {
     let noumber = card.id.match(/\d+/g).join("");
     card.addEventListener("dblclick", () => {
-      localStorage.setItem("courentLevel", +noumber - 1);
+      localStorage.setItem("courentLevel", +noumber);
       localStorage.setItem("destenation", "type");
       location.href = "/bags/loading.html";
     });

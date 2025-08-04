@@ -58,6 +58,7 @@ showPass.addEventListener("click", () => {
 /**
  * Loads player list from localStorage or initializes as empty array.
  */
+
 if (localStorage.getItem("playerList")) {
   playerList = JSON.parse(localStorage.getItem("playerList"));
 } else {
