@@ -24,21 +24,20 @@
  * - levelFond: Flag indicating if the level was found for the user
  * - iIndex: Index of the current user in gameInfo
  */
-// Import modules
 import { createKeyboard, listenKeyboard } from "./modules/keyboard.js";
 import { renderArticle, listenTyping } from "./modules/typing.js";
-let wordsContainer = document.querySelector(".words"),
-  articalLetters,
-  corentletter = 0,
-  level = localStorage.getItem("courentLevel"),
-  requardSpeed,
-  seconds = 0,
-  time,
-  userObj = JSON.parse(localStorage.getItem("corentPlayer")),
-  levelObj,
-  gameInfo = JSON.parse(localStorage.getItem("gameInfo"));
-let levelFond = false,
-  iIndex;
+const wordsContainer = document.querySelector(".words");
+let articalLetters = [];
+let corentletter = 0;
+const level = localStorage.getItem("courentLevel");
+let requardSpeed = 0;
+let seconds = 0;
+let time;
+let userObj = JSON.parse(localStorage.getItem("corentPlayer"));
+let levelObj;
+let gameInfo = JSON.parse(localStorage.getItem("gameInfo"));
+let levelFond = false;
+let iIndex;
 
 /**
  * Find or create the current level object for the user.
@@ -49,7 +48,7 @@ let levelFond = false,
 for (let i = 0; i < gameInfo.length; i++) {
   if (gameInfo[i].userName == userObj.userName) {
     for (let j = 0; j < gameInfo[i].levels.length; j++) {
-      if (gameInfo[i].levels[j].levelNumber == +level + 1) {
+      if (gameInfo[i].levels[j].levelNumber == +level) {
         levelObj = gameInfo[i].levels[j];
         levelFond = true;
       }
@@ -57,10 +56,9 @@ for (let i = 0; i < gameInfo.length; i++) {
     iIndex = i;
   }
 }
-// If the level was not found, create a new one for the user
 if (!levelFond) {
   levelObj = {
-    levelNumber: +level + 1,
+    levelNumber: +level,
     stars: 0,
     percent: 0,
     heighestSpeed: 0,
@@ -114,52 +112,12 @@ keyboradSuitch.onclick = function () {
 };
 
 // Create and attach keyboard
-let keybord = createKeyboard(document.body); // You can change container as needed
+const keybord = createKeyboard(document.body);
 
 // Render article letters
 function includeArtical(artical) {
-  // Clear previous content
   wordsContainer.innerHTML = "";
   articalLetters = renderArticle(wordsContainer, artical.articalText);
-}
-
-/**
- * Creates and inserts a special key into the keyboard.
- *
- * @param {string} innerValue - Display value for the key
- * @param {string} dataValue - Data-key attribute value
- * @param {string} targetDataValue - Key to insert before/after
- * @param {boolean} befor - If true, insert before; else, after
- */
-function creatkey(innerValue, dataValue, targetDataValue, befor = true) {
-  let key = document.createElement("span");
-  key.append(innerValue);
-  key.setAttribute("data-key", dataValue);
-  key.classList.add("key-shadow-out");
-
-  if (befor) {
-    document.querySelector(`[data-key="${targetDataValue}"]`).before(key);
-  } else {
-    document.querySelector(`[data-key="${targetDataValue}"]`).after(key);
-  }
-}
-
-/**
- * Renders the article text as individual letter spans in the words container.
- *
- * @param {Object} artical - The article object containing articalText
- */
-function includeArtical(artical) {
-  let letters = Array.from(artical.articalText);
-  for (let i = 0; i < letters.length; i++) {
-    let span = document.createElement("span");
-    span.appendChild(document.createTextNode(letters[i]));
-    span.setAttribute("data-key", letters[i]);
-    if (letters[i] == " ") {
-      span.classList.add("space");
-    }
-    wordsContainer.appendChild(span);
-  }
 }
 /**
  * Listens for keyboard events and updates the article letter states.
@@ -181,92 +139,11 @@ function startlisnningArtical() {
 /**
  * Tracks whether the Shift key is currently active.
  */
-let notShift = true;
-
-/**
- * Listens for keyboard events and updates the on-screen keyboard UI.
- *
- * - Highlights the current key.
- * - Handles Shift key logic.
- */
-
 function startlisnningKeybord() {
   listenKeyboard(keybord, articalLetters, () => corentletter);
 }
 
-/**
- * Animates a key to visually indicate a key press.
- *
- * @param {HTMLElement} ele - The key element to animate
- */
-function blinck(ele) {
-  if (ele.classList.contains("courent")) {
-    ele.classList.remove("key-shadow-out");
-    ele.classList.add("key-shadow-in");
-    setTimeout(() => {
-      ele.classList.add("key-shadow-out");
-      ele.classList.remove("key-shadow-in");
-    }, 50);
-  }
-}
-
-/**
- * Highlights the current key and handles Shift key logic for the on-screen keyboard.
- *
- * @param {HTMLElement[]} keys - Array of key elements
- */
-function shickKeys(keys) {
-  keys.forEach((ele) => {
-    if (ele.dataset.key == articalLetters[corentletter].dataset.key) {
-      ele.classList.add("courent");
-    } else if (
-      ele.dataset.key !== "Shift" &&
-      ele.dataset.key.toUpperCase() !== articalLetters[corentletter].dataset.key
-    ) {
-      blinck(ele);
-      ele.classList.remove("courent");
-    }
-    if (
-      ele.dataset.key.toUpperCase() ===
-        articalLetters[corentletter].dataset.key &&
-      ele.dataset.key.toUpperCase() !== ele.dataset.key
-    ) {
-      addShift(ele, keys);
-      notShift = false;
-    } else {
-      // No shift needed
-    }
-  });
-}
-
-/**
- * Highlights the appropriate Shift key for uppercase or special characters.
- *
- * @param {HTMLElement} ele - The key element
- * @param {HTMLElement[]} keysArray - Array of key elements
- */
-function addShift(ele, keysArray) {
-  let rightShiftKeys = Array.from("qwertasdfgzxcvb~!@#$%");
-  let shifts = keysArray.filter((val) => {
-    return val.dataset.key == "Shift";
-  });
-  ele.classList.add("courent");
-  if (rightShiftKeys.includes(`${ele.dataset.key}`)) {
-    shifts[1].classList.add("courent");
-  } else {
-    shifts[0].classList.add("courent");
-  }
-}
-
-/**
- * Removes highlight from all Shift keys.
- */
-function removeShift() {
-  document.querySelectorAll("[data-key='Shift']").forEach((ele) => {
-    blinck(ele);
-    ele.classList.remove("courent");
-  });
-}
+// Removed unused/repeated keyboard helper functions (blinck, shickKeys, addShift, removeShift)
 
 /**
  * Starts the timer for tracking typing speed.
