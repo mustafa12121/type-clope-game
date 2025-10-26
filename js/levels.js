@@ -37,6 +37,13 @@ let cardsContianer = document.querySelector(".cards"),
   showPass = document.getElementById("eye"),
   subPass = document.querySelector(".leyout div input[type='submit']");
 
+let articalsPath;
+if (localStorage.getItem("keyboardLayout") === null) {
+  articalsPath = "./articals/articals_en.json";
+} else if (localStorage.getItem("keyboardLayout") === "arabic") {
+  articalsPath = "./articals/articals_ar.json";
+}
+
 /**
  * Redirects to sign-in page if no current user is found, otherwise loads user object.
  */
@@ -68,7 +75,7 @@ document.querySelector(".sgin-out").addEventListener("click", () => {
  */
 async function getlevels() {
   try {
-    let alllevels = await fetch("/articals.json");
+    let alllevels = await fetch(articalsPath);
     return await alllevels.json();
   } catch {
     throw new Error("levels fill not found");

@@ -39,6 +39,14 @@ let levelObj;
 let gameInfo = JSON.parse(localStorage.getItem("gameInfo"));
 let levelFond = false;
 let iIndex;
+let articalsPath;
+
+if (localStorage.getItem("keyboardLayout") === null) {
+  articalsPath = "./articals/articals_en.json";
+  console.log("default to english");
+} else if (localStorage.getItem("keyboardLayout") === "arabic") {
+  articalsPath = "./articals/articals_ar.json";
+}
 
 /**
  * Find or create the current level object for the user.
@@ -80,13 +88,12 @@ document.querySelector("section").append(keybord);
  */
 async function getwords() {
   try {
-    let jsonObj = await fetch("/articals.json");
+    let jsonObj = await fetch(articalsPath);
     let articalsObjArray = await jsonObj.json();
-    console.table(articalsObjArray);
-    console.log(level);
     return articalsObjArray[+level - 1]; // Adjusted to match level index
   } catch {
-    throw new Error("the articals fill not found");
+    console.log(articalsPath);
+    throw new Error("the articals file not found");
   }
 }
 

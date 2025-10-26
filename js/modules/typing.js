@@ -46,7 +46,18 @@ export function listenTyping(
     "Delete",
     "CapsLock",
   ];
+
+  // create audio player (use correct constructor and file path)
+  const click = new Audio("/sound/type.mp3");
+  const wrong = new Audio("/sound/wrong.mp3");
   window.onkeydown = (ev) => {
+    const click = new Audio("/sound/type.mp3");
+    const wrong = new Audio("/sound/wrong.mp3");
+    wrong.preload = "auto";
+    wrong.currentTime = 0;
+    click.preload = "auto";
+    // reset playback and play; use currentTime (not time) and handle promise
+    click.currentTime = 0;
     if (ev.key === "/") {
       ev.preventDefault();
     }
@@ -64,6 +75,7 @@ export function listenTyping(
           articalLetters[corentletter].classList.add("deleted");
         }
       } else if (ev.key == articalLetters[corentletter].dataset.key) {
+        click.play();
         if (articalLetters[corentletter].classList.contains("deleted")) {
           articalLetters[corentletter].classList.add("fixed");
         } else {
@@ -75,6 +87,7 @@ export function listenTyping(
           setCurrentLetterIndex(corentletter + 1);
         }
       } else {
+        wrong.play();
         articalLetters[corentletter].classList.add("wrong");
         if (corentletter === articalLetters.length - 1) {
           onEnd();

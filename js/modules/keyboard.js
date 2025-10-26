@@ -7,10 +7,18 @@
  * @returns {HTMLElement} The keyboard element
  */
 export function createKeyboard() {
+  let keylayoutEn = "`1234567890-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./";
+  let keylayoutAr = "ذ1234567890-=ضصثقفغعهخحجد\\شسيبلاتنمكطئءؤرلاىةوزظ";
+  let keylayout;
+  if (localStorage.getItem("keyboardLayout") === "arabic") {
+    keylayout = keylayoutAr;
+  } else {
+    keylayout = keylayoutEn;
+  }
   let keybord = document.createElement("div");
   keybord.classList.add("keybord", "shadow");
   keybord.id = "keybord";
-  let keys = Array.from("`1234567890-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./");
+  let keys = Array.from(keylayout);
   for (let i = 0; i < keys.length; i++) {
     let span = document.createElement("span");
     span.appendChild(document.createTextNode(keys[i]));
@@ -23,12 +31,22 @@ export function createKeyboard() {
     }
     keybord.appendChild(span);
   }
-  creatkey(keybord, "tap", "Tap", "q");
-  creatkey(keybord, "Back", "Backspace", "=", false);
-  creatkey(keybord, "capslock", "CapsLock", "a");
-  creatkey(keybord, "shift", "Shift", "z");
-  creatkey(keybord, "shift", "Shift", "/", false);
-  creatkey(keybord, "Enter", "Enter", "'", false);
+  // make the special keys spacifec ot arabic or english layouts @todo
+  if (localStorage.getItem("keyboardLayout") === "arabic") {
+    creatkey(keybord, "tap", "Tap", "ض");
+    creatkey(keybord, "Back", "Backspace", "=", false);
+    creatkey(keybord, "capslock", "CapsLock", "ش");
+    creatkey(keybord, "shift", "Shift", "ئ");
+    creatkey(keybord, "shift", "Shift", "ظ", false);
+    creatkey(keybord, "Enter", "Enter", "ط", false);
+  } else {
+    creatkey(keybord, "tap", "Tap", "q");
+    creatkey(keybord, "Back", "Backspace", "=", false);
+    creatkey(keybord, "capslock", "CapsLock", "a");
+    creatkey(keybord, "shift", "Shift", "z");
+    creatkey(keybord, "shift", "Shift", "/", false);
+    creatkey(keybord, "Enter", "Enter", "'", false);
+  }
   let space = document.createElement("div");
   space.append("space");
   space.setAttribute("data-key", " ");
