@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tato typing clope</title>
+    <link rel="icon" type="image/png" href="/imgs/icon.png" />
+    <title>typingo</title>
     <link
       rel="stylesheet"
       href="./fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.ttf"
@@ -23,6 +24,7 @@
     <div class="leyout">
       <div>
         <form action="">
+          <div>Hello <span id="name"></span></div>
           <label for="pass">your password</label>
           <input type="password" id="pass" /><i
             class="fa-solid fa-eye"
@@ -33,8 +35,14 @@
       </div>
     </div>
     <header>
-      <div>Hello:<span id="name"></span></div>
       <div class="sgin-out">sginOut <i class="fa-solid fa-user-slash"></i></div>
+      <div class="language">
+        <i class="fa fa-globe"></i>
+        <select name="lang" id="lang">
+          <option value="english">English</option>
+          <option value="arabic">Arabic</option>
+        </select>
+      </div>
     </header>
     <div class="levels">
       <div class="container">
@@ -42,23 +50,23 @@
         <div class="results">
           <div class="stars">
             stars
-            <span id="starsGain"
-              ><i class="fa-regular fa-star"></i
-              ><i class="fa-regular fa-star"></i
-              ><i class="fa-regular fa-star"></i
-              ><i class="fa-regular fa-star"></i
-              ><i class="fa-regular fa-star"></i
-            ></span>
+            <span id="starsGain">
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </span>
           </div>
           <div class="bers">
             <div class="folts-bers">
-              <canvas width="150" height="150"></canvas>
+              <canvas width="180" height="180"></canvas>
               <div><span>0</span> WPM</div>
             </div>
 
             <div class="speed-bers">
-              <canvas width="150" height="150"></canvas>
-              <div><span>0</span> folt</div>
+              <canvas width="180" height="180"></canvas>
+              <div><span>0</span> foult</div>
             </div>
           </div>
         </div>

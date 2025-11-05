@@ -13,7 +13,20 @@ body {
 :root {
   --main-color: #00bcd4;
 }
-
+.language {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.language select {
+  color: white;
+  background: #26de80;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 0 5px;
+}
 .leyout,
 .delet-div {
   width: 100%;
@@ -165,6 +178,8 @@ header .sgin-out {
 }
 
 .levels .container .results .bers {
+  font-size: 1.3rem;
+  font-weight: bold;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
@@ -180,10 +195,6 @@ header .sgin-out {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-.levels .container .results div {
-  margin-bottom: 20px;
 }
 
 .levels .container .results div span {

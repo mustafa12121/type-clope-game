@@ -114,7 +114,6 @@ section .words {
   -o-border-radius: 7px;
 }
 section span {
-  display: inline-block;
   margin-bottom: 8px;
 }
 section .words .space {

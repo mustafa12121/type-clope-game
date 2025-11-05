@@ -1,3 +1,4 @@
+import { druCanvas } from "./modules/functions.js";
 /**
  * Levels Page Main Logic
  *
@@ -35,12 +36,21 @@ let cardsContianer = document.querySelector(".cards"),
   pass = document.getElementById("pass"),
   password = "",
   showPass = document.getElementById("eye"),
-  subPass = document.querySelector(".leyout div input[type='submit']");
+  subPass = document.querySelector(".leyout div input[type='submit']"),
+  lang = localStorage.getItem("lang"),
+  selectLang = document.querySelector("#lang");
 
 let articalsPath;
-if (localStorage.getItem("keyboardLayout") === null) {
+if (lang === "english") {
+  document.body.dir = "ltr";
+  document.querySelector(".delet").style = "left:unset;right:50px;";
+  selectLang.value = "english";
   articalsPath = "./articals/articals_en.json";
-} else if (localStorage.getItem("keyboardLayout") === "arabic") {
+} else if (lang === "arabic") {
+  document.body.dir = "rtl";
+  document.querySelector(".delet").style = "left:50px;right:unset;";
+  selectLang.value = "arabic";
+
   articalsPath = "./articals/articals_ar.json";
 }
 
@@ -69,6 +79,13 @@ document.querySelector(".sgin-out").addEventListener("click", () => {
   document.querySelector(".leyout").style.display = "flex";
 });
 
+/**
+ * functionalty of the language button
+ */
+document.querySelector("#lang").addEventListener("change", () => {
+  localStorage.setItem("lang", document.querySelector("#lang").value);
+  location.reload();
+});
 /**
  * Fetches all levels from articals.json.
  * @returns {Promise<Array>} Array of level objects
@@ -138,8 +155,8 @@ document.querySelector(".delet").addEventListener("click", () => {
   document.querySelectorAll(".leyout")[1].style.display = "flex";
 });
 
-let secondIcon = document.querySelectorAll(".leyout i")[1];
-let secondInput = document.querySelectorAll(".leyout input:nth-child(2)")[1];
+let secondIcon = document.querySelector("#eye2");
+let secondInput = document.querySelector("#pass2");
 let deletingBotton = document.querySelectorAll(
   ".leyout div input[type='submit']"
 )[1];
@@ -200,8 +217,10 @@ function createLevelCard(title, ronde, requardSpeed) {
   lvNumber.appendChild(document.createTextNode(ronde));
   lvSpan.appendChild(lvNumber);
   infoInnerDiv.appendChild(lvSpan);
-
-  if (ronde > userObj.lastlevel) {
+  let last;
+  if (lang === "arabic") last = userObj.lastlevel[1];
+  else last = userObj.lastlevel[0];
+  if (ronde > last) {
     card.classList.add("not-open");
   } else {
     card.classList.add("open");
@@ -241,7 +260,13 @@ function updateInfo() {
     oldUser = false;
   for (let i in gameInfo) {
     if (gameInfo[i].userName == userObj.userName) {
-      levelsInfoArray = gameInfo[i].levels;
+      try {
+        if (lang === "arabic") levelsInfoArray = gameInfo[i].levels[1];
+        else levelsInfoArray = gameInfo[i].levels[0];
+      } catch {
+        console.log("levels load faild");
+      }
+
       oldUser = true;
     }
   }
@@ -250,7 +275,7 @@ function updateInfo() {
   } else {
     gameInfo.push({
       userName: userObj.userName,
-      levels: [],
+      levels: [[], []],
     });
   }
   updateLocal();
@@ -276,6 +301,7 @@ function updateLocal() {
  * @param {Array} levelsObjsArray - Array of level objects for the user
  */
 function updateCards(levelsObjsArray) {
+  console.log(levelsObjsArray);
   for (let i = 0; i < levelsObjsArray.length; i++) {
     let level = levelsObjsArray[i];
     levelsObjs = levelsObjsArray;
@@ -419,7 +445,7 @@ function showInfo(card) {
       speedSpan
     );
     druCanvas(
-      selectedLevel.percent,
+      selectedLevel.accuracy,
       canvass[1],
       selectedLevel.wrongLetters,
       foltSpan
@@ -443,43 +469,3 @@ function showInfo(card) {
  * @param {number} conter - Counter value to display
  * @param {HTMLElement} [span] - Optional span to update with counter
  */
-function druCanvas(bers, canvas, conter, span) {
-  let newCanvas = document.createElement("canvas");
-  newCanvas.setAttribute("width", canvas.width);
-  newCanvas.setAttribute("height", canvas.width);
-  canvas.parentElement.appendChild(newCanvas);
-  canvas.remove();
-  let conte = newCanvas.getContext("2d");
-  let [centerX, centerY] = [
-    newCanvas.clientWidth / 2,
-    newCanvas.clientHeight / 2,
-  ];
-  let fullCiercel = 2 * Math.PI;
-  conte.lineWidth = 15;
-  conte.beginPath();
-  conte.strokeStyle = "#ccc";
-  conte.arc(centerX, centerY, centerX - 20, 0, fullCiercel);
-  conte.stroke();
-  let i = 0,
-    br = 0,
-    cont = 0;
-  let druer = setInterval(() => {
-    //changing the contur numbers
-    span ? (cont > conter ? "" : (span.innerHTML = `${cont}`) && cont++) : "";
-    //chosing the color
-    if (i > 0.7) {
-      conte.strokeStyle = "green";
-    } else if (i >= 0.5) conte.strokeStyle = "#f3f34c";
-    else if (i < 0.5) conte.strokeStyle = "red";
-    //end chosing the color
-    conte.beginPath();
-    i = parseFloat(i.toFixed(3));
-    conte.arc(centerX, centerY, centerX - 20, 0, i * fullCiercel);
-    if (i >= bers / 100) {
-      clearInterval(druer);
-    }
-    i += 0.01;
-    br += 0.01;
-    conte.stroke();
-  }, 20);
-}

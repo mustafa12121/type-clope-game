@@ -7,18 +7,70 @@
  * @returns {HTMLElement} The keyboard element
  */
 export function createKeyboard() {
-  let keylayoutEn = "`1234567890-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./";
-  let keylayoutAr = "ذ1234567890-=ضصثقفغعهخحجد\\شسيبلاتنمكطئءؤرلاىةوزظ";
+  let keylayoutEn = Array.from(
+    "`1234567890-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./"
+  );
+  let keylayoutAr = [
+    "ذ",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "0",
+    "-",
+    "=",
+    "ض",
+    "ص",
+    "ث",
+    "ق",
+    "ف",
+    "غ",
+    "ع",
+    "ه",
+    "خ",
+    "ح",
+    "ج",
+    "د",
+    "\\",
+    "ش",
+    "س",
+    "ي",
+    "ب",
+    "ل",
+    "ا",
+    "ت",
+    "ن",
+    "م",
+    "ك",
+    "ط",
+    "ئ",
+    "ء",
+    "ؤ",
+    "ر",
+    "لا",
+    "ى",
+    "ة",
+    "و",
+    "ز",
+    "ظ",
+  ];
   let keylayout;
-  if (localStorage.getItem("keyboardLayout") === "arabic") {
+  if (localStorage.getItem("lang") === "arabic") {
     keylayout = keylayoutAr;
   } else {
     keylayout = keylayoutEn;
   }
   let keybord = document.createElement("div");
   keybord.classList.add("keybord", "shadow");
+
   keybord.id = "keybord";
-  let keys = Array.from(keylayout);
+  let keys = keylayout;
+  console.log(keylayout);
   for (let i = 0; i < keys.length; i++) {
     let span = document.createElement("span");
     span.appendChild(document.createTextNode(keys[i]));
@@ -32,7 +84,7 @@ export function createKeyboard() {
     keybord.appendChild(span);
   }
   // make the special keys spacifec ot arabic or english layouts @todo
-  if (localStorage.getItem("keyboardLayout") === "arabic") {
+  if (localStorage.getItem("lang") === "arabic") {
     creatkey(keybord, "tap", "Tap", "ض");
     creatkey(keybord, "Back", "Backspace", "=", false);
     creatkey(keybord, "capslock", "CapsLock", "ش");
@@ -98,15 +150,18 @@ export function blinkKey(ele) {
  * @param {HTMLElement[]} keysArray - Array of key elements
  */
 export function addShift(ele, keysArray) {
-  let rightShiftKeys = Array.from("qwertasdfgzxcvb~!@#$%");
+  let leftShiftKeys = Array.from("qwertasdfgzxcvb~!@#$%");
+  if (localStorage.getItem("keybordLayout") == "arabic") {
+    leftShiftKeys = Array.from('/:,.؟"');
+  }
   let shifts = keysArray.filter((val) => {
     return val.dataset.key == "Shift";
   });
   ele.classList.add("courent");
-  if (rightShiftKeys.includes(`${ele.dataset.key}`)) {
-    shifts[1].classList.add("courent");
-  } else {
+  if (leftShiftKeys.includes(`${ele.dataset.key}`)) {
     shifts[0].classList.add("courent");
+  } else {
+    shifts[1].classList.add("courent");
   }
 }
 

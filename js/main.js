@@ -40,12 +40,14 @@ let gameInfo = JSON.parse(localStorage.getItem("gameInfo"));
 let levelFond = false;
 let iIndex;
 let articalsPath;
+let lang = localStorage.getItem("lang");
 
-if (localStorage.getItem("keyboardLayout") === null) {
-  articalsPath = "./articals/articals_en.json";
-  console.log("default to english");
-} else if (localStorage.getItem("keyboardLayout") === "arabic") {
-  articalsPath = "./articals/articals_ar.json";
+if (lang === "english") {
+  document.body.dir = "ltr";
+  articalsPath = "/articals/articals_en.json";
+} else if (lang === "arabic") {
+  document.body.dir = "rtl";
+  articalsPath = "/articals/articals_ar.json";
 }
 
 /**
@@ -53,16 +55,29 @@ if (localStorage.getItem("keyboardLayout") === null) {
  *
  * - Searches gameInfo for the current user and level.
  * - If not found, creates a new level object and adds it to the user.
+ * the level[0] is the english language levels and level[1] is the arabic langouage levels
  */
 for (let i = 0; i < gameInfo.length; i++) {
-  if (gameInfo[i].userName == userObj.userName) {
-    for (let j = 0; j < gameInfo[i].levels.length; j++) {
-      if (gameInfo[i].levels[j].levelNumber == +level) {
-        levelObj = gameInfo[i].levels[j];
-        levelFond = true;
+  if (lang === "english") {
+    if (gameInfo[i].userName == userObj.userName) {
+      for (let j = 0; j < gameInfo[i].levels[0].length; j++) {
+        if (gameInfo[i].levels[0][j].levelNumber == +level) {
+          levelObj = gameInfo[i].levels[0][j];
+          levelFond = true;
+        }
       }
+      iIndex = i;
     }
-    iIndex = i;
+  } else if (lang === "arabic") {
+    if (gameInfo[i].userName == userObj.userName) {
+      for (let j = 0; j < gameInfo[i].levels[1].length; j++) {
+        if (gameInfo[i].levels[1][j].levelNumber == +level) {
+          levelObj = gameInfo[i].levels[1][j];
+          levelFond = true;
+        }
+      }
+      iIndex = i;
+    }
   }
 }
 // ...existing code...
@@ -74,8 +89,10 @@ if (!levelFond) {
     percent: 0,
     heighestSpeed: 0,
     wrongLetters: 0,
+    accuracy: 0,
   };
-  gameInfo[iIndex].levels.push(levelObj);
+  if (lang === "english") gameInfo[iIndex].levels[0].push(levelObj);
+  else gameInfo[iIndex].levels[1].push(levelObj);
 }
 
 // Create and attach keyboard using the module
@@ -169,10 +186,17 @@ function endGame() {
     if (levelObj.stars < Math.trunc(percent / 20)) {
       levelObj.stars = Math.trunc(percent / 20);
     }
+    levelObj.accuracy = Math.round(accuracy);
     levelObj.percent = percent;
     if (percent > 60) {
-      if (userObj.lastlevel < +levelObj.levelNumber + 1) {
-        userObj.lastlevel = +levelObj.levelNumber + 1;
+      if (lang === "arabic") {
+        if (userObj.lastlevel[1] < +levelObj.levelNumber + 1) {
+          userObj.lastlevel[1] = +levelObj.levelNumber + 1;
+        }
+      } else {
+        if (userObj.lastlevel[0] < +levelObj.levelNumber + 1) {
+          userObj.lastlevel[0] = +levelObj.levelNumber + 1;
+        }
       }
     }
     if (levelObj.heighestSpeed < wpm) {
@@ -188,6 +212,6 @@ function endGame() {
   }
   localStorage.setItem("corentPlayer", JSON.stringify(userObj));
   localStorage.setItem("gameInfo", JSON.stringify(gameInfo));
-  localStorage.setItem("destenation", "levels");
+  localStorage.setItem("destenation", "results");
   location.href = "/bags/loading.html";
 }

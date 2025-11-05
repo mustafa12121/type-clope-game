@@ -150,12 +150,20 @@ function newUser() {
   }
 
   if (newPlyre) {
-    playerList.push({ userName: userName, lastlevel: 1, password: password });
+    playerList.push({
+      userName: userName,
+      lastlevel: [1, 1],
+      password: password,
+    });
     let playerTolocal = JSON.stringify(playerList);
     localStorage.setItem("playerList", playerTolocal);
     localStorage.setItem(
       "corentPlayer",
-      JSON.stringify({ userName: userName, lastlevel: 1, password: password })
+      JSON.stringify({
+        userName: userName,
+        lastlevel: [1, 1],
+        password: password,
+      })
     );
     info.innerHTML = "sginup seccessfully";
     info.classList.add("fuond");
@@ -236,5 +244,6 @@ deletUserChanging();
  * Redirects to the levels page after successful sign-in/sign-up.
  */
 function goToLevels() {
+  localStorage.setItem("lang", "english");
   window.location = "../index.html";
 }
