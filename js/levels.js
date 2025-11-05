@@ -26,8 +26,7 @@ import { druCanvas } from "./modules/functions.js";
  */
 let cardsContianer = document.querySelector(".cards"),
   level,
-  speed,
-  title,
+  isAdmin,
   gameInfo,
   cards,
   userObj,
@@ -61,6 +60,7 @@ if (!localStorage.getItem("corentPlayer")) {
   window.location.href = "/bags/sign.html";
 } else {
   userObj = JSON.parse(localStorage.getItem("corentPlayer"));
+  if (userObj.userName.toLocaleLowerCase() == "admin") isAdmin = true;
 }
 
 /**
@@ -220,7 +220,9 @@ function createLevelCard(title, ronde, requardSpeed) {
   let last;
   if (lang === "arabic") last = userObj.lastlevel[1];
   else last = userObj.lastlevel[0];
-  if (ronde > last) {
+  if (isAdmin) {
+    card.classList.add("open");
+  } else if (ronde > last) {
     card.classList.add("not-open");
   } else {
     card.classList.add("open");
