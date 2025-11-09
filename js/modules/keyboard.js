@@ -150,18 +150,18 @@ export function blinkKey(ele) {
  * @param {HTMLElement[]} keysArray - Array of key elements
  */
 export function addShift(ele, keysArray) {
-  let leftShiftKeys = Array.from("qwertasdfgzxcvb~!@#$%");
+  let rightShiftKeys = Array.from("qwertasdfgzxcvb~!@#$%");
   if (localStorage.getItem("keybordLayout") == "arabic") {
-    leftShiftKeys = Array.from('/:,.؟"');
+    rightShiftKeys = Array.from('/:,.؟"');
   }
   let shifts = keysArray.filter((val) => {
     return val.dataset.key == "Shift";
   });
   ele.classList.add("courent");
-  if (leftShiftKeys.includes(`${ele.dataset.key}`)) {
-    shifts[0].classList.add("courent");
-  } else {
+  if (rightShiftKeys.includes(`${ele.dataset.key}`)) {
     shifts[1].classList.add("courent");
+  } else {
+    shifts[0].classList.add("courent");
   }
 }
 
