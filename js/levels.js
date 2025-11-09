@@ -331,6 +331,7 @@ function startlesitning() {
     let noumber = card.id.match(/\d+/g).join("");
     card.addEventListener("dblclick", () => {
       localStorage.setItem("courentLevel", +noumber);
+      console.log(+noumber);
       localStorage.setItem("destenation", "type");
       location.href = "/bags/loading.html";
     });

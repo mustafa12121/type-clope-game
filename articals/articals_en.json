@@ -1,603 +1,902 @@
 [
   {
-    "articalText": "ffff jjjj fjfjf ffjj ffjj fjfjfj jfjf jjjjj jjjjj fffff fffff",
+    "articalText": "ffff ffff ffff ffff ffff ffff ffff ffff",
     "ronde": 1,
-    "title": "f&j",
+    "title": "Home Row: f - Left Index",
     "requardSpeed": 10
   },
   {
-    "articalText": "gggg hhhh gggg hhhh ghghgh hhhh gggg jhjh fgfg fffggg jjjhhh gggg hhhh",
+    "articalText": "jjjj jjjj jjjj jjjj jjjj jjjj jjjj jjjj",
     "ronde": 2,
-    "title": "h&g",
+    "title": "Home Row: j - Right Index",
     "requardSpeed": 10
   },
   {
-    "articalText": "kkkk dddd dkdkd dddd kkkk dkdkdk dddkkk dkdkdkd kkkkkkk dddddd",
+    "articalText": "ffff jjjj fjfj jfjf fj fj jfjf ffff jjjj",
     "ronde": 3,
-    "title": "k&d",
+    "title": "Merge: f + j - Index Fingers",
     "requardSpeed": 10
   },
   {
-    "articalText": "ssss llll ssll slsls ssss llll slslsl sl ls ll ss lsl lsl ssll ssll ssll llsls",
+    "articalText": "fjjf fjff jfjj jffj ffjj ffjj fjfj jfjf",
     "ronde": 4,
-    "title": "s&l",
+    "title": "Drill: f j - Cumulative",
     "requardSpeed": 10
   },
   {
-    "articalText": "aaaa ;;;; aaa; ;;;a ;a;a a;a; a;a; a;a; ;; aa aa;a; aa;; ;;aa ;;;; aaaa",
+    "articalText": "dddd dddd dddd dddd dddd dddd dddd dddd",
     "ronde": 5,
-    "title": "a&;",
+    "title": "Home Row: d - Left Middle",
     "requardSpeed": 10
   },
   {
-    "articalText": "rrrr uuuu ru ru ju ju fr fr jjff juju frfr ju ju frjufr jufr uuu rrr jhujhu fgrfgr fggr jhhu",
+    "articalText": "kkkk kkkk kkkk kkkk kkkk kkkk kkkk kkkk",
     "ronde": 6,
-    "title": "r&u",
+    "title": "Home Row: k - Right Middle",
     "requardSpeed": 10
   },
   {
-    "articalText": "yyyy tttt ytyt yytt ttyy tyty jyjy ftft fttf jyyj jtfy fyjy ftjt ffjj ttyy ftjy tttt yyyy",
+    "articalText": "dddd kkkk dkdk kd kd ddkk kkdd dddd kkkk",
     "ronde": 7,
-    "title": "y&t",
+    "title": "Merge: d + k - Middle Fingers",
     "requardSpeed": 10
   },
   {
-    "articalText": "iiii eeee kiki dede ddee kkii dede kiki kedi kedi kkdd iiee kiki dede eiei kide eeee iiii",
+    "articalText": "fjdj kfkd dfkj jfdf kjdk fjfdk ddkk fjjj kkkf jjjk",
     "ronde": 8,
-    "title": "i&e",
+    "title": "Drill: f j d k - Cumulative",
     "requardSpeed": 10
   },
-
   {
-    "articalText": "wwww oooo wwoo swsw lolo wowow lolo slsl slow owls owow lwso lwos solw wwww oooo",
+    "articalText": "ssss ssss ssss ssss ssss ssss ssss ssss",
     "ronde": 9,
-    "title": "o&w",
+    "title": "Home Row: s - Left Ring",
     "requardSpeed": 10
   },
   {
-    "articalText": "qqqq pppp qpqp qqpp ppqq ;p;p aqaq ;paq pq;a ppqq ;p;p aqaq ;qap qqqq pppp",
+    "articalText": "llll llll llll llll llll llll llll llll",
     "ronde": 10,
-    "title": "p&q",
+    "title": "Home Row: l - Right Ring",
     "requardSpeed": 10
   },
   {
-    "articalText": "nnnn vvvv vvnn vnvn nnvv nvnv vvnn nnvv vnvn nnvv njnj vfvf njfn vfnj nn jj vvff nnjj",
+    "articalText": "ssss llll slsl ls ls ssll llss ssss llll",
     "ronde": 11,
-    "title": "n&v",
+    "title": "Merge: s + l - Ring Fingers",
     "requardSpeed": 10
   },
   {
-    "articalText": "bbbb ffbb ggbb fgb fgb bbbb hhbb jhb jhb bhj jjbb hhbb ggbb ffbb",
+    "articalText": "fjsl dkls slkd fjld kfjd dslk lsdf kjsl",
     "ronde": 12,
-    "title": "b",
+    "title": "Drill: f j d k s l - Cumulative",
     "requardSpeed": 10
   },
   {
-    "articalText": "cccc ,,, cc,, c,c, ,c,c ,,cc cd,k k,dc dc,k ,kcd ,,kk ccdd dck, cc,, cccc ,,,,",
+    "articalText": "aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa",
     "ronde": 13,
-    "title": "c&,",
+    "title": "Home Row: a - Left Pinky",
     "requardSpeed": 10
   },
   {
-    "articalText": "xxxx .... x.x. xx.. x.x. .x.x xx.. .l.l xsxs xl.s ll.. ssxx ssll .lxs l.sx",
+    "articalText": ";;;; ;;;; ;;;; ;;;; ;;;; ;;;; ;;;; ;;;;",
     "ronde": 14,
-    "title": "x&.",
+    "title": "Home Row: ; - Right Pinky",
     "requardSpeed": 10
   },
   {
-    "articalText": "zzzz //// z/z/ /z/z zz// /;za az;/ /;za aa;; /;;z azz; aa;; //;; zzaa a;a; /z/z /;za",
+    "articalText": "aaaa ;;;; a;a; ;a;a aa;; ;;aa aaaa ;;;;",
     "ronde": 15,
-    "title": "/&z",
+    "title": "Merge: a + ; - Pinky Fingers",
     "requardSpeed": 10
   },
   {
-    "articalText": "a fluffy kitten hides and seeks among desks in libraries",
+    "articalText": "fjdklsa; ;aslkdjf fdsajkl; a;lskjdf ajdkslf; slkdfj a;slkj",
     "ronde": 16,
-    "title": "kitten",
+    "title": "Drill: Home Row - Cumulative (All 8)",
     "requardSpeed": 15
   },
   {
-    "articalText": "giggle as you juggle fragrant jars of jam and jellies",
+    "articalText": "gggg gggg gggg gggg gggg gggg gggg gggg",
     "ronde": 17,
-    "title": "g&j",
+    "title": "Home Row: g - Left Index Stretch",
     "requardSpeed": 15
   },
   {
-    "articalText": "draw detailed sketches of gardens filled with sunflowers",
+    "articalText": "hhhh hhhh hhhh hhhh hhhh hhhh hhhh hhhh",
     "ronde": 18,
-    "title": "gardens",
+    "title": "Home Row: h - Right Index Stretch",
     "requardSpeed": 15
   },
   {
-    "articalText": "dance gracefully across dew kissed leaves after a gantle rain",
+    "articalText": "ffff gggg fgfg gfgf fg fg gfgf jjjj hhhh jhjh hjhj",
     "ronde": 19,
-    "title": "dance",
+    "title": "Merge: g + h - Index Stretch",
     "requardSpeed": 15
   },
   {
-    "articalText": "write haiku poems full of hidden joy and whispered wonder",
+    "articalText": "fgjh dksa l;fjgh dksa l;fghj dksa l;fgjh dksa l;ghj",
     "ronde": 20,
-    "title": "write",
+    "title": "Drill: Home Row Extended - Cumulative",
     "requardSpeed": 15
   },
   {
-    "articalText": "ask kind questions and listen attentively to shared stories",
+    "articalText": "rrrr rrrr rrrr rrrr rrrr rrrr rrrr rrrr",
     "ronde": 21,
-    "title": "listen",
+    "title": "Top Row: r - Left Index",
     "requardSpeed": 15
   },
   {
-    "articalText": "rhythmically tap your fingers on keyboards under twilight hues",
+    "articalText": "uuuu uuuu uuuu uuuu uuuu uuuu uuuu uuuu",
     "ronde": 22,
-    "title": "fingers",
+    "title": "Top Row: u - Right Index",
     "requardSpeed": 15
   },
   {
-    "articalText": "write witty rhymes and practice enunciating every word clearly",
+    "articalText": "rrrr uuuu ruru urur rurr urur uuuu rrrr",
     "ronde": 23,
-    "title": "witty",
+    "title": "Merge: r + u - Index Fingers",
     "requardSpeed": 15
   },
   {
-    "articalText": "explore hidden pathways in quiet forests where trees whisper secrets",
+    "articalText": "furj ruhj dfkj ralsg urhj dslk fjru ghlj",
     "ronde": 24,
-    "title": "pathways",
+    "title": "Drill: Home & Top (r u) - Cumulative",
     "requardSpeed": 15
   },
   {
-    "articalText": "draw intricate mandalas filled with vibrant hues and patterns",
+    "articalText": "eeee eeee eeee eeee eeee eeee eeee eeee",
     "ronde": 25,
-    "title": "mandalas",
+    "title": "Top Row: e - Left Middle",
     "requardSpeed": 15
   },
   {
-    "articalText": "practice typing quickly and accurately without sacrificing precision",
+    "articalText": "iiii iiii iiii iiii iiii iiii iiii iiii",
     "ronde": 26,
-    "title": "practice",
+    "title": "Top Row: i - Right Middle",
     "requardSpeed": 15
   },
   {
-    "articalText": "bake delicious pies with juicy fruits and creamy fillings",
+    "articalText": "eeee iiii eiei ieie eii eeii eeee iiii",
     "ronde": 27,
-    "title": "juicy fruits",
+    "title": "Merge: e + i - Middle Fingers",
     "requardSpeed": 15
   },
   {
-    "articalText": "the quick brown fox jumps over the lazy dog",
+    "articalText": "erui ieru fjdk eiur ruid a;ls eiru slkj",
     "ronde": 28,
-    "title": "fox",
+    "title": "Drill: Home & Top (r u e i) - Cumulative",
     "requardSpeed": 15
   },
   {
-    "articalText": "she sells seashells by the seashore",
+    "articalText": "wwww wwww wwww wwww wwww wwww wwww wwww",
     "ronde": 29,
-    "title": "sells",
+    "title": "Top Row: w - Left Ring",
     "requardSpeed": 15
   },
   {
-    "articalText": "pack my box withe five dozen liquor jugs",
+    "articalText": "oooo oooo oooo oooo oooo oooo oooo oooo",
     "ronde": 30,
-    "title": "my-box",
+    "title": "Top Row: o - Right Ring",
     "requardSpeed": 15
   },
   {
-    "articalText": "the rhythm of raindrops against the windowpane creates a peacful lullaby",
+    "articalText": "wwww oooo wowo owow wwoo oo ww wwww oooo",
     "ronde": 31,
-    "title": "raindrops",
+    "title": "Merge: w + o - Ring Fingers",
     "requardSpeed": 15
   },
   {
-    "articalText": "write a whimsical story about a curious penguin exploring the arctic ice floes",
+    "articalText": "weiruo oiwe asdfghjkl; wosl kfoi jwha ;ol",
     "ronde": 32,
-    "title": "story",
+    "title": "Drill: Home & Top (r u e i w o) - Cumulative",
     "requardSpeed": 15
   },
   {
-    "articalText": "Congratulations you are well one your way to mastering touch typing",
+    "articalText": "qqqq qqqq qqqq qqqq qqqq qqqq qqqq qqqq",
     "ronde": 33,
-    "title": "congrats",
+    "title": "Top Row: q - Left Pinky",
     "requardSpeed": 15
   },
   {
-    "articalText": "a fluffy kitten hides and seeks among desks in libraries",
+    "articalText": "pppp pppp pppp pppp pppp pppp pppp pppp",
     "ronde": 34,
-    "title": "kitten",
+    "title": "Top Row: p - Right Pinky",
     "requardSpeed": 15
   },
   {
-    "articalText": "giggle as you juggle fragrant jars of jam and jellies",
+    "articalText": "qqqq pppp qpqp pqpq qpp qqpp qqqq pppp",
     "ronde": 35,
-    "title": "g&j",
+    "title": "Merge: q + p - Pinky Fingers",
     "requardSpeed": 15
   },
   {
-    "articalText": "draw detailed sketches of gardens filled with sunflowers",
+    "articalText": "qweruiop asdfghjkl; qweruiop asdfghjkl; slkjfdsa qpoi",
     "ronde": 36,
-    "title": "gardens",
-    "requardSpeed": 20
+    "title": "Drill: Top & Home Rows - Cumulative",
+    "requardSpeed": 15
   },
   {
-    "articalText": "dance gracefully across dew kissed leaves after a gantle rain",
+    "articalText": "tyty tttt yyyy tyty yt yt tyty yttt",
     "ronde": 37,
-    "title": "dance",
-    "requardSpeed": 20
+    "title": "Top Row: t + y - Index Stretch (Final Top)",
+    "requardSpeed": 15
   },
   {
-    "articalText": "write haiku poems full of hidden joy and whispered wonder",
+    "articalText": "qweruiop asdfghjkl; qweruiop asdfghjkl;",
     "ronde": 38,
-    "title": "write",
-    "requardSpeed": 20
+    "title": "Drill: Full Top & Home Rows - Cumulative",
+    "requardSpeed": 15
   },
   {
-    "articalText": "ask kind questions and listen attentively to shared stories",
+    "articalText": "cccc cccc cccc cccc cccc cccc cccc cccc",
     "ronde": 39,
-    "title": "listen",
-    "requardSpeed": 20
+    "title": "Bottom Row: c - Left Middle",
+    "requardSpeed": 15
   },
   {
-    "articalText": "rhythmically tap your fingers on keyboards under twilight hues",
+    "articalText": "mmmm mmmm mmmm mmmm mmmm mmmm mmmm mmmm",
     "ronde": 40,
-    "title": "fingers",
-    "requardSpeed": 20
+    "title": "Bottom Row: m - Right Middle",
+    "requardSpeed": 15
   },
   {
-    "articalText": "write witty rhymes and practice enunciating every word clearly",
+    "articalText": "cccc mmmm cmcm mcmc cmcc mmcc cccc mmmm",
     "ronde": 41,
-    "title": "witty",
-    "requardSpeed": 20
+    "title": "Merge: c + m - Middle Fingers",
+    "requardSpeed": 15
   },
   {
-    "articalText": "explore hidden pathways in quiet forests where trees whisper secrets",
+    "articalText": "qwert cm asdfm cm ghjkl cm cmtm jkmc",
     "ronde": 42,
-    "title": "pathways",
+    "title": "Drill: c m - Cumulative",
     "requardSpeed": 20
   },
   {
-    "articalText": "draw intricate mandalas filled with vibrant hues and patterns",
+    "articalText": "vvvv vvvv vvvv vvvv vvvv vvvv vvvv vvvv",
     "ronde": 43,
-    "title": "mandalas",
+    "title": "Bottom Row: v - Left Index",
     "requardSpeed": 20
   },
   {
-    "articalText": "practice typing quickly and accurately without sacrificing precision",
+    "articalText": "nnnn nnnn nnnn nnnn nnnn nnnn nnnn nnnn",
     "ronde": 44,
-    "title": "practice",
+    "title": "Bottom Row: n - Right Index",
     "requardSpeed": 20
   },
   {
-    "articalText": "bake delicious pies with juicy fruits and creamy fillings",
+    "articalText": "vvvv nnnn vnvn nvn nnvv vvnn vvvv nnnn",
     "ronde": 45,
-    "title": "juicy fruits",
+    "title": "Merge: v + n - Index Fingers",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "vcnm vncm qwerbnm asdfvn ghljknm vncmnm",
+    "ronde": 46,
+    "title": "Drill: c m v n - Cumulative",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx",
+    "ronde": 47,
+    "title": "Bottom Row: x - Left Ring",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": ".... .... .... .... .... .... .... ....",
+    "ronde": 48,
+    "title": "Bottom Row: . - Right Ring (Period)",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "xxxx .... x.x. .x.x xxxx .... x.x. .x.x",
+    "ronde": 49,
+    "title": "Merge: x + . - Ring Fingers",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "xv.n cmxn qwer.bnm xmncv .mxnc xcvnm x.cvn",
+    "ronde": 50,
+    "title": "Drill: c m v n x . - Cumulative",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "zzzz zzzz zzzz zzzz zzzz zzzz zzzz zzzz",
+    "ronde": 51,
+    "title": "Bottom Row: z - Left Pinky",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "//// //// //// //// //// //// //// ////",
+    "ronde": 52,
+    "title": "Bottom Row: / - Right Pinky (Slash)",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "zzzz //// z/z/ /z/z zz// //zz zzzz ////",
+    "ronde": 53,
+    "title": "Merge: z + / - Pinky Fingers",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "zxcvbnm./ qweruio.pasdfghjkl; zx./bnm/",
+    "ronde": 54,
+    "title": "Drill: c m v n x . z / - Cumulative",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb",
+    "ronde": 55,
+    "title": "Bottom Row: b - Left Index Stretch",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": ",,,, ,,,, ,,,, ,,,, ,,,, ,,,, ,,,, ,,,,",
+    "ronde": 56,
+    "title": "Bottom Row: , - Right Index Stretch (Comma)",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "bbbb ,,,, bb,, b,b, ,,bb b,,, bbbb ,,,,",
+    "ronde": 57,
+    "title": "Merge: b + , - Index Stretch",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "zxcvbnm,./ lkjhgfdsazxcvbnm qwe mn bnv",
+    "ronde": 58,
+    "title": "Drill: Full Keyboard - Cumulative (Small)",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "fly ask all fall lass less jell kiss",
+    "ronde": 59,
+    "title": "Words: Home Row",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "deer read tree wire word rope road dear",
+    "ronde": 60,
+    "title": "Words: Home & Top Row",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "very much new box zero cover calm jump",
+    "ronde": 61,
+    "title": "Words: All Rows",
     "requardSpeed": 20
   },
   {
     "articalText": "the quick brown fox jumps over the lazy dog",
-    "ronde": 46,
-    "title": "fox",
+    "ronde": 62,
+    "title": "Pangram: The Quick Fox",
     "requardSpeed": 20
   },
   {
     "articalText": "she sells seashells by the seashore",
-    "ronde": 47,
-    "title": "sells",
+    "ronde": 63,
+    "title": "Pangram: She Sells Seashells",
     "requardSpeed": 20
   },
   {
-    "articalText": "pack my box withe five dozen liquor jugs",
-    "ronde": 48,
-    "title": "my-box",
-    "requardSpeed": 20
-  },
-  {
-    "articalText": "the rhythm of raindrops against the windowpane creates a peacful lullaby",
-    "ronde": 49,
-    "title": "raindrops",
-    "requardSpeed": 20
-  },
-  {
-    "articalText": "write a whimsical story about a curious penguin exploring the arctic ice floes",
-    "ronde": 50,
-    "title": "story",
-    "requardSpeed": 20
-  },
-  {
-    "articalText": "Congratulations you are well one your way to mastering touch typing",
-    "ronde": 51,
-    "title": "congrats",
+    "articalText": "pack my box with five dozen liquor jugs",
+    "ronde": 64,
+    "title": "Pangram: Pack My Box",
     "requardSpeed": 20
   },
   {
     "articalText": "a fluffy kitten hides and seeks among desks in libraries",
-    "ronde": 52,
-    "title": "kitten",
-    "requardSpeed": 25
+    "ronde": 65,
+    "title": "Sentence: Kitten Hides",
+    "requardSpeed": 20
   },
   {
     "articalText": "giggle as you juggle fragrant jars of jam and jellies",
-    "ronde": 53,
-    "title": "g&j",
-    "requardSpeed": 25
-  },
-  {
-    "articalText": "draw detailed sketches of gardens filled with sunflowers",
-    "ronde": 54,
-    "title": "gardens",
-    "requardSpeed": 25
-  },
-  {
-    "articalText": "dance gracefully across dew kissed leaves after a gantle rain",
-    "ronde": 55,
-    "title": "dance",
-    "requardSpeed": 25
+    "ronde": 66,
+    "title": "Sentence: Juggling Jars",
+    "requardSpeed": 20
   },
   {
     "articalText": "write haiku poems full of hidden joy and whispered wonder",
-    "ronde": 56,
-    "title": "write",
-    "requardSpeed": 25
+    "ronde": 67,
+    "title": "Sentence: Haiku Poems",
+    "requardSpeed": 20
   },
   {
     "articalText": "ask kind questions and listen attentively to shared stories",
-    "ronde": 57,
-    "title": "listen",
-    "requardSpeed": 25
-  },
-  {
-    "articalText": "rhythmically tap your fingers on keyboards under twilight hues",
-    "ronde": 58,
-    "title": "fingers",
-    "requardSpeed": 25
-  },
-  {
-    "articalText": "write witty rhymes and practice enunciating every word clearly",
-    "ronde": 59,
-    "title": "witty",
-    "requardSpeed": 25
-  },
-  {
-    "articalText": "explore hidden pathways in quiet forests where trees whisper secrets",
-    "ronde": 60,
-    "title": "pathways",
-    "requardSpeed": 25
-  },
-  {
-    "articalText": "draw intricate mandalas filled with vibrant hues and patterns",
-    "ronde": 61,
-    "title": "mandalas",
-    "requardSpeed": 25
-  },
-  {
-    "articalText": "practice typing quickly and accurately without sacrificing precision",
-    "ronde": 62,
-    "title": "practice",
-    "requardSpeed": 25
-  },
-  {
-    "articalText": "bake delicious pies with juicy fruits and creamy fillings",
-    "ronde": 63,
-    "title": "juicy fruits",
-    "requardSpeed": 25
-  },
-  {
-    "articalText": "the quick brown fox jumps over the lazy dog",
-    "ronde": 64,
-    "title": "fox",
-    "requardSpeed": 25
-  },
-  {
-    "articalText": "she sells seashells by the seashore",
-    "ronde": 65,
-    "title": "sells",
-    "requardSpeed": 25
-  },
-  {
-    "articalText": "pack my box withe five dozen liquor jugs",
-    "ronde": 66,
-    "title": "my-box",
-    "requardSpeed": 25
-  },
-  {
-    "articalText": "the rhythm of raindrops against the windowpane creates a peacful lullaby",
-    "ronde": 67,
-    "title": "raindrops",
-    "requardSpeed": 25
-  },
-  {
-    "articalText": "write a whimsical story about a curious penguin exploring the arctic ice floes",
     "ronde": 68,
-    "title": "story",
-    "requardSpeed": 25
+    "title": "Sentence: Kind Questions",
+    "requardSpeed": 20
   },
   {
-    "articalText": "Congratulations you are well one your way to mastering touch typing",
+    "articalText": "Fff Jjj Ff Jj Ff Jj FFF Jjj",
     "ronde": 69,
-    "title": "congrats",
-    "requardSpeed": 25
+    "title": "Capital: F J - Home Row Index",
+    "requardSpeed": 20
   },
   {
-    "articalText": "type with joy and focus as you reach new milestones in your typing journey, mastering each key with confidence and speed",
+    "articalText": "Ddd Kkk Dd Kk Dd Kk Ddd Kkk",
     "ronde": 70,
-    "title": "milestones",
-    "requardSpeed": 30
+    "title": "Capital: D K - Home Row Middle",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "A S D F G H J K L A S D F",
+    "ronde": 71,
+    "title": "Capital: All Home Row",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "E R T Y U I O P Q W E R T Y",
+    "ronde": 72,
+    "title": "Capital: All Top Row",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "Z X C V B N M Z X C V B N M",
+    "ronde": 73,
+    "title": "Capital: All Bottom Row",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "The Quick Brown Fox Jumps Over The Lazy Dog",
+    "ronde": 74,
+    "title": "Capital: Start of Word Practice",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "Alpha Beta Gamma Delta Alpha Beta Gamma",
+    "ronde": 75,
+    "title": "Capital: Merge Practice",
+    "requardSpeed": 20
+  },
+  {
+    "articalText": "ing ing ing ing ing ing ing ing ing ing",
+    "ronde": 76,
+    "title": "Trigram Drill: ing",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "tion tion tion tion tion tion tion tion",
+    "ronde": 77,
+    "title": "Trigram Drill: tion",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "ment ment ment ment ment ment ment ment",
+    "ronde": 78,
+    "title": "Trigram Drill: ment",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "age age age age age age age age age age",
+    "ronde": 79,
+    "title": "Trigram Drill: age",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "the the the the the the the the the the",
+    "ronde": 80,
+    "title": "Trigram Drill: the",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "and and and and and and and and and and",
+    "ronde": 81,
+    "title": "Trigram Drill: and",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "con con con con con con con con con con",
+    "ronde": 82,
+    "title": "Trigram Drill: con",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "dis dis dis dis dis dis dis dis dis dis",
+    "ronde": 83,
+    "title": "Trigram Drill: dis",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "sh sh sh sh sh sh sh sh sh sh sh sh sh",
+    "ronde": 84,
+    "title": "Digraph Drill: sh",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "ch ch ch ch ch ch ch ch ch ch ch ch ch",
+    "ronde": 85,
+    "title": "Digraph Drill: ch",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "th th th th th th th th th th th th th",
+    "ronde": 86,
+    "title": "Digraph Drill: th",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "er er er er er er er er er er er er er",
+    "ronde": 87,
+    "title": "Digraph Drill: er",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "al al al al al al al al al al al al al",
+    "ronde": 88,
+    "title": "Digraph Drill: al",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "es es es es es es es es es es es es es",
+    "ronde": 89,
+    "title": "Digraph Drill: es",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "pro pro pro pro pro pro pro pro pro pro",
+    "ronde": 90,
+    "title": "Trigram Drill: pro",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "res res res res res res res res res res",
+    "ronde": 91,
+    "title": "Trigram Drill: res",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "rerer ttyty uiuio popo eiei wowo qpqp",
+    "ronde": 92,
+    "title": "Speed Drill 1: Top Row N-Gram",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "dfdfjkls asdfghjkl dfghjkls asdf jkls",
+    "ronde": 93,
+    "title": "Speed Drill 2: Home Row N-Gram",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "cvbnmcvbnm zxcvbnm,./ zxcvbnm,.mn",
+    "ronde": 94,
+    "title": "Speed Drill 3: Bottom Row N-Gram",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "theand andthe butthe isthe ofthe forthe",
+    "ronde": 95,
+    "title": "Speed Drill 4: Common Trigrams",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "ment tion ing ly ed ness al ish",
+    "ronde": 96,
+    "title": "Speed Drill 5: Suffix Practice",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "word work week wish went west wash wake",
+    "ronde": 97,
+    "title": "Speed Drill 6: W Words",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "love live look last late light learn left",
+    "ronde": 98,
+    "title": "Speed Drill 7: L Words",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "quick power speed rate touch rhythm fast",
+    "ronde": 99,
+    "title": "Speed Drill 8: Typing Keywords",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "rerere popopo asasas ;;;; lslslsl dkdksks",
+    "ronde": 100,
+    "title": "Speed Drill 9: Double Letter Focus",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "ask said look took away home move have",
+    "ronde": 101,
+    "title": "Speed Drill 10: High Frequency Words",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "the sun rises over calm hills in the morning",
+    "ronde": 102,
+    "title": "English Sentence - Level 1",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "a young writer types with focus and steady rhythm",
+    "ronde": 103,
+    "title": "English Sentence - Level 1",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "practice brings progress and confidence every day",
+    "ronde": 104,
+    "title": "English Sentence - Level 1",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "soft rain falls on the green grass outside",
+    "ronde": 105,
+    "title": "English Sentence - Level 1",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "birds sing a sweet melody in the quiet trees",
+    "ronde": 106,
+    "title": "English Sentence - Level 1",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "blue waves roll gently onto the sandy shore",
+    "ronde": 107,
+    "title": "English Sentence - Level 2",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "a small boat sails swiftly across the wide ocean",
+    "ronde": 108,
+    "title": "English Sentence - Level 2",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "read a good book to learn new words and facts",
+    "ronde": 109,
+    "title": "English Sentence - Level 2",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "explore new pathways in the hidden deep forest",
+    "ronde": 110,
+    "title": "English Sentence - Level 2",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "always remember to check your work for errors",
+    "ronde": 111,
+    "title": "English Sentence - Level 2",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "friendly faces make every journey feel much better",
+    "ronde": 112,
+    "title": "English Sentence - Level 3",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "typing accurately is much more important than speed",
+    "ronde": 113,
+    "title": "English Sentence - Level 3",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "listen to your teacher and follow all instructions",
+    "ronde": 114,
+    "title": "English Sentence - Level 3",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "a bright star shines above the lonely wooden house",
+    "ronde": 115,
+    "title": "English Sentence - Level 3",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "the large clock ticks slowly on the wall above me",
+    "ronde": 116,
+    "title": "English Sentence - Level 3",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "imagine a whimsical story about a curious arctic penguin",
+    "ronde": 117,
+    "title": "English Sentence - Level 4",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "good posture and relaxed hands are key to fast typing",
+    "ronde": 118,
+    "title": "English Sentence - Level 4",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "learning a new skill takes patience and steady practice",
+    "ronde": 119,
+    "title": "English Sentence - Level 4",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "never look down at the keys trust your muscle memory",
+    "ronde": 120,
+    "title": "English Sentence - Level 4",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "the sound of wind chimes creates a peaceful moment outside",
+    "ronde": 121,
+    "title": "English Sentence - Level 4",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "use the correct finger for each key to maximize efficiency",
+    "ronde": 122,
+    "title": "English Sentence - Level 5",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "set a high goal and work hard every day to reach it",
+    "ronde": 123,
+    "title": "English Sentence - Level 5",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "a steady rhythm is essential for achieving high typing speed",
+    "ronde": 124,
+    "title": "English Sentence - Level 5",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "congratulations you are now on your way to mastering touch typing",
+    "ronde": 125,
+    "title": "English Sentence - Level 5",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "enjoy the process of improvement and celebrate every small win",
+    "ronde": 126,
+    "title": "English Sentence - Level 5",
+    "requardSpeed": 35
+  },
+  {
+    "articalText": "type with joy and focus as you reach new milestones in your typing journey mastering each key with confidence and speed",
+    "ronde": 127,
+    "title": "Advanced Drill: Milestones",
+    "requardSpeed": 40
   },
   {
     "articalText": "jump over lazy dogs quickly and quietly while practicing your typing skills every day to improve speed and accuracy for better results in all your work tasks",
-    "ronde": 71,
-    "title": "jump dogs",
-    "requardSpeed": 30
+    "ronde": 128,
+    "title": "Advanced Drill: Jump Dogs",
+    "requardSpeed": 40
   },
   {
-    "articalText": "bright stars twinkle in the night sky as you type each word with focus and determination, building muscle memory and confidence in your touch typing abilities",
-    "ronde": 72,
-    "title": "stars twinkle",
-    "requardSpeed": 30
+    "articalText": "bright stars twinkle in the night sky as you type each word with focus and determination building muscle memory and confidence in your touch typing abilities",
+    "ronde": 129,
+    "title": "Advanced Drill: Stars Twinkle",
+    "requardSpeed": 40
   },
   {
-    "articalText": "type every word with perfect form and steady hands, making sure to keep your eyes on the screen and your fingers on the home row for best results",
-    "ronde": 73,
-    "title": "perfect form",
-    "requardSpeed": 30
+    "articalText": "type every word with perfect form and steady hands making sure to keep your eyes on the screen and your fingers on the home row for best results",
+    "ronde": 130,
+    "title": "Advanced Drill: Perfect Form",
+    "requardSpeed": 40
   },
   {
-    "articalText": "quick hands make light work when you practice typing daily, so set aside time to improve your skills and watch your progress grow each week",
-    "ronde": 74,
-    "title": "quick hands",
-    "requardSpeed": 30
+    "articalText": "quick hands make light work when you practice typing daily so set aside time to improve your skills and watch your progress grow each week",
+    "ronde": 131,
+    "title": "Advanced Drill: Quick Hands",
+    "requardSpeed": 40
   },
   {
-    "articalText": "focus on accuracy before speed to ensure that your typing is both fast and correct, helping you avoid mistakes and build good habits for the future",
-    "ronde": 75,
-    "title": "focus accuracy",
-    "requardSpeed": 30
+    "articalText": "focus on accuracy before speed to ensure that your typing is both fast and correct helping you avoid mistakes and build good habits for the future",
+    "ronde": 132,
+    "title": "Advanced Drill: Focus Accuracy",
+    "requardSpeed": 40
   },
   {
-    "articalText": "practice makes every typist better, so repeat your exercises and challenge yourself with new words and sentences to keep improving",
-    "ronde": 76,
-    "title": "practice better",
-    "requardSpeed": 30
+    "articalText": "practice makes every typist better so repeat your exercises and challenge yourself with new words and sentences to keep improving",
+    "ronde": 133,
+    "title": "Advanced Drill: Practice Better",
+    "requardSpeed": 40
   },
   {
-    "articalText": "keep your fingers on the home row and use the correct finger for each key, which will help you type faster and more accurately over time",
-    "ronde": 77,
-    "title": "home row",
-    "requardSpeed": 30
+    "articalText": "keep your fingers on the home row and use the correct finger for each key which will help you type faster and more accurately over time",
+    "ronde": 134,
+    "title": "Advanced Drill: Home Row Focus",
+    "requardSpeed": 40
   },
   {
-    "articalText": "never look down at the keyboard while typing, instead trust your muscle memory and focus on the words appearing on the screen in front of you",
-    "ronde": 78,
-    "title": "no look",
-    "requardSpeed": 30
+    "articalText": "never look down at the keyboard while typing instead trust your muscle memory and focus on the words appearing on the screen in front of you",
+    "ronde": 135,
+    "title": "Advanced Drill: No Look Focus",
+    "requardSpeed": 40
   },
   {
-    "articalText": "steady rhythm helps you type fast and accurately, so try to maintain a consistent pace and avoid rushing through your practice sessions",
-    "ronde": 79,
-    "title": "steady rhythm",
-    "requardSpeed": 30
+    "articalText": "steady rhythm helps you type fast and accurately so try to maintain a consistent pace and avoid rushing through your practice sessions",
+    "ronde": 136,
+    "title": "Advanced Drill: Steady Rhythm",
+    "requardSpeed": 40
   },
   {
     "articalText": "rest your wrists and relax your mind between typing exercises to prevent fatigue and keep your hands healthy for long practice sessions",
-    "ronde": 80,
-    "title": "relax mind",
-    "requardSpeed": 30
+    "ronde": 137,
+    "title": "Advanced Drill: Relax Mind",
+    "requardSpeed": 40
   },
   {
-    "articalText": "each finger has its own job to do on the keyboard, so practice using all your fingers to type each letter and symbol with confidence",
-    "ronde": 81,
-    "title": "each finger",
-    "requardSpeed": 30
+    "articalText": "each finger has its own job to do on the keyboard so practice using all your fingers to type each letter and symbol with confidence",
+    "ronde": 138,
+    "title": "Advanced Drill: Each Finger",
+    "requardSpeed": 40
   },
   {
-    "articalText": "type with confidence and calm focus, knowing that every practice session brings you closer to mastering the art of touch typing",
-    "ronde": 82,
-    "title": "calm focus",
-    "requardSpeed": 30
+    "articalText": "type with confidence and calm focus knowing that every practice session brings you closer to mastering the art of touch typing",
+    "ronde": 139,
+    "title": "Advanced Drill: Calm Focus",
+    "requardSpeed": 40
   },
   {
-    "articalText": "short sentences are great for practice, but try longer ones too so you can build endurance and improve your typing speed over time",
-    "ronde": 83,
-    "title": "short sentences",
-    "requardSpeed": 30
+    "articalText": "move your hands smoothly and swiftly across the keyboard making sure to use the correct finger for each key and keep your posture straight",
+    "ronde": 140,
+    "title": "Advanced Drill: Move Smoothly",
+    "requardSpeed": 40
   },
   {
-    "articalText": "move your hands smoothly and swiftly across the keyboard, making sure to use the correct finger for each key and keep your posture straight",
-    "ronde": 84,
-    "title": "move smoothly",
-    "requardSpeed": 30
+    "articalText": "press each key with gentle force and avoid pounding on the keyboard which will help you type more quietly and reduce hand strain",
+    "ronde": 141,
+    "title": "Advanced Drill: Gentle Force",
+    "requardSpeed": 40
   },
   {
-    "articalText": "press each key with gentle force and avoid pounding on the keyboard, which will help you type more quietly and reduce hand strain",
-    "ronde": 85,
-    "title": "gentle force",
-    "requardSpeed": 30
+    "articalText": "watch your progress and celebrate wins no matter how small because every improvement in your typing skills is a step forward",
+    "ronde": 142,
+    "title": "Advanced Drill: Celebrate Wins",
+    "requardSpeed": 40
   },
   {
-    "articalText": "watch your progress and celebrate wins, no matter how small, because every improvement in your typing skills is a step forward",
-    "ronde": 86,
-    "title": "celebrate wins",
-    "requardSpeed": 30
-  },
-  {
-    "articalText": "mistakes are lessons for improvement, so do not be discouraged if you make errors while typing, just keep practicing and you will get better",
-    "ronde": 87,
-    "title": "mistakes lessons",
-    "requardSpeed": 30
+    "articalText": "mistakes are lessons for improvement so do not be discouraged if you make errors while typing just keep practicing and you will get better",
+    "ronde": 143,
+    "title": "Advanced Drill: Mistakes Lessons",
+    "requardSpeed": 40
   },
   {
     "articalText": "challenge yourself with new words daily and try to type them as quickly and accurately as possible to build your vocabulary and speed",
-    "ronde": 88,
-    "title": "challenge daily",
-    "requardSpeed": 30
+    "ronde": 144,
+    "title": "Advanced Drill: Challenge Daily",
+    "requardSpeed": 40
   },
   {
-    "articalText": "typing is a skill you can always grow, so keep learning new techniques and practicing regularly to become a true typing master",
-    "ronde": 89,
-    "title": "skill grow",
-    "requardSpeed": 30
+    "articalText": "typing is a skill you can always grow so keep learning new techniques and practicing regularly to become a true typing master",
+    "ronde": 145,
+    "title": "Advanced Drill: Skill Grow",
+    "requardSpeed": 40
   },
   {
-    "articalText": "type with purpose and patience, improving your skills with every session and building confidence in your ability to type quickly and accurately",
-    "ronde": 90,
-    "title": "purpose patience",
-    "requardSpeed": 30
+    "articalText": "type with purpose and patience improving your skills with every session and building confidence in your ability to type quickly and accurately",
+    "ronde": 146,
+    "title": "Advanced Drill: Purpose Patience",
+    "requardSpeed": 40
   },
   {
     "articalText": "every day brings a new chance to improve your typing skills and reach new goals with steady practice and focus on accuracy and speed",
-    "ronde": 91,
-    "title": "new chance",
-    "requardSpeed": 30
+    "ronde": 147,
+    "title": "Advanced Drill: New Chance",
+    "requardSpeed": 40
   },
   {
     "articalText": "set a timer and challenge yourself to type as many words as you can without looking at the keyboard or making mistakes in your sentences",
-    "ronde": 92,
-    "title": "timer challenge",
-    "requardSpeed": 30
+    "ronde": 148,
+    "title": "Advanced Drill: Timer Challenge",
+    "requardSpeed": 40
   },
   {
     "articalText": "stretch your fingers before and after typing to keep your hands healthy and ready for more practice sessions every single day",
-    "ronde": 93,
-    "title": "stretch fingers",
-    "requardSpeed": 30
+    "ronde": 149,
+    "title": "Advanced Drill: Stretch Fingers",
+    "requardSpeed": 40
   },
   {
-    "articalText": "find your favorite typing music and let the rhythm help you keep a steady pace as you work through each level and lesson",
-    "ronde": 94,
-    "title": "typing music",
-    "requardSpeed": 30
-  },
-  {
-    "articalText": "review your progress at the end of each week and celebrate the improvements you have made in both speed and accuracy",
-    "ronde": 95,
-    "title": "review progress",
-    "requardSpeed": 30
-  },
-  {
-    "articalText": "invite a friend to join you in a typing race and see who can finish the level first with the fewest mistakes and the highest speed",
-    "ronde": 96,
-    "title": "typing race",
-    "requardSpeed": 30
-  },
-  {
-    "articalText": "try typing with different keyboard layouts to discover which one feels most comfortable and helps you reach your best performance",
-    "ronde": 97,
-    "title": "keyboard layout",
-    "requardSpeed": 30
-  },
-  {
-    "articalText": "read a short story and type it out from memory to test your recall and reinforce your touch typing skills in a fun way",
-    "ronde": 98,
-    "title": "story memory",
-    "requardSpeed": 30
-  },
-  {
-    "articalText": "keep your posture straight and your shoulders relaxed while typing to avoid fatigue and make your practice more enjoyable",
-    "ronde": 99,
-    "title": "good posture",
-    "requardSpeed": 30
-  },
-  {
-    "articalText": "this is all what we have so fare you can edit the articals file if you wand to write more, don't forget that practice make perfect",
-    "ronde": 100,
-    "title": "the end",
-    "requardSpeed": 30
+    "articalText": "this is all what we have so far you can edit the articles file if you want to write more dont forget that practice makes perfect",
+    "ronde": 150,
+    "title": "The End - Practice Makes Perfect",
+    "requardSpeed": 40
   }
 ]

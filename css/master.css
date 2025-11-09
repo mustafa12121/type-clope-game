@@ -1,6 +1,26 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Teko";
+  src: url("../fonts/Teko/Teko-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Teko";
+  src: url("../fonts/Teko/Teko-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
 :root {
   --main-color: #00bcd4;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;

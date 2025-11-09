@@ -43,10 +43,9 @@ let articalsPath;
 let lang = localStorage.getItem("lang");
 
 if (lang === "english") {
-  document.body.dir = "ltr";
   articalsPath = "/articals/articals_en.json";
 } else if (lang === "arabic") {
-  document.body.dir = "rtl";
+  document.querySelector(".words").dir = "rtl";
   articalsPath = "/articals/articals_ar.json";
 }
 
