@@ -336,6 +336,11 @@ function startlesitning() {
       location.href = "/bags/loading.html";
     });
     card.addEventListener("click", () => {
+      const levelClick = new Audio("/sound/level_click.mp3");
+      levelClick.volume = 0.2;
+      levelClick.preload = "auto";
+      levelClick.currentTime = 0;
+      levelClick.play();
       showInfo(card);
     });
   });

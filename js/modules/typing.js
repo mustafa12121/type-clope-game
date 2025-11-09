@@ -48,15 +48,12 @@ export function listenTyping(
   ];
 
   // create audio player (use correct constructor and file path)
-  const click = new Audio("/sound/type.mp3");
-  const wrong = new Audio("/sound/wrong.mp3");
   window.onkeydown = (ev) => {
     const click = new Audio("/sound/type.mp3");
     const wrong = new Audio("/sound/wrong.mp3");
     wrong.preload = "auto";
     wrong.currentTime = 0;
     click.preload = "auto";
-    // reset playback and play; use currentTime (not time) and handle promise
     click.currentTime = 0;
     if (ev.key === "/") {
       ev.preventDefault();
