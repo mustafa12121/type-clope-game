@@ -1,6 +1,26 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Teko";
+  src: url("../fonts/Teko/Teko-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Teko";
+  src: url("../fonts/Teko/Teko-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
 :root {
   --main-color: #00bcd4;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -113,11 +133,13 @@ section .words {
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
 }
+section span {
+  margin-bottom: 8px;
+}
 section .words .space {
   width: 13px;
-  display: inline-block;
-  height: 33px;
-  margin-bottom: -7px;
+  height: 48px;
+  margin-bottom: -15px;
 }
 .keybord {
   background-color: white;
@@ -170,8 +192,8 @@ section .words .space {
 .keybord span span.home-row {
   width: 50%;
   position: absolute;
-  height: 3px;
-  bottom: 2px;
+  height: 2px;
+  bottom: -5px;
   align-self: center;
   left: 9px;
   background: #777;

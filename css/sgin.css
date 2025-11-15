@@ -1,3 +1,22 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Teko";
+  src: url("../fonts/Teko/Teko-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Teko";
+  src: url("../fonts/Teko/Teko-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
 body {
   font-family: "Open Sans";
   user-select: none;
@@ -19,22 +38,25 @@ header {
   padding: 15px 20px;
   font-size: 20px;
   background-color: var(--main-color);
+  align-items: center;
   color: white;
-  height: 57px;
+  height: 75px;
 }
-header .logo {
-  font-weight: bold;
+header .logo img {
+  width: 62px;
+  background: white;
+  border-radius: 50%;
 }
 
 header div span {
   font-weight: bold;
-  color: #fb8c00;
+  color: #a2d13a;
 }
 section {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 109px);
+  height: calc(100vh - 129px);
 }
 
 section .sign {

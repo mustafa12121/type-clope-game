@@ -1,48 +1,119 @@
-let wordsContainer = document.querySelector(".words"),
-  articalLetters,
-  corentletter = 0,
-  level = localStorage.getItem("courentLevel"),
-  requardSpeed,
-  seconds = 0,
-  time,
-  userObj = JSON.parse(localStorage.getItem("corentPlayer")),
-  levelObj,
-  gameInfo = JSON.parse(localStorage.getItem("gameInfo"));
-let levelFond = false,
-  iIndex;
+/**
+ * Typing Game Main Logic
+ *
+ * This file contains the main logic for the typing game, including:
+ * - Level and user management
+ * - Article loading and rendering
+ * - Keyboard UI and event handling
+ * - Game progress tracking and scoring
+ */
 
+/**
+ * DOM and game state variables
+ *
+ * - wordsContainer: Container for article letters
+ * - articalLetters: Array of letter elements for the current article
+ * - corentletter: Index of the current letter being typed
+ * - level: Current level number from localStorage
+ * - requardSpeed: Required WPM for the current level
+ * - seconds: Timer for tracking typing duration
+ * - time: Interval timer reference
+ * - userObj: Current user object from localStorage
+ * - levelObj: Current level object for the user
+ * - gameInfo: Array of all users and their progress
+ * - levelFond: Flag indicating if the level was found for the user
+ * - iIndex: Index of the current user in gameInfo
+ */
+// Import modules
+import { createKeyboard, listenKeyboard } from "./modules/keyboard.js";
+import { renderArticle, listenTyping } from "./modules/typing.js";
+const wordsContainer = document.querySelector(".words");
+let articalLetters = [];
+let corentletter = 0;
+const level = localStorage.getItem("courentLevel");
+let requardSpeed = 0;
+let seconds = 0;
+let time;
+let userObj = JSON.parse(localStorage.getItem("corentPlayer"));
+let levelObj;
+let gameInfo = JSON.parse(localStorage.getItem("gameInfo"));
+let levelFond = false;
+let iIndex;
+let articalsPath;
+let lang = localStorage.getItem("lang");
+
+if (lang === "english") {
+  articalsPath = "/articals/articals_en.json";
+} else if (lang === "arabic") {
+  document.querySelector(".words").dir = "rtl";
+  articalsPath = "/articals/articals_ar.json";
+}
+
+/**
+ * Find or create the current level object for the user.
+ *
+ * - Searches gameInfo for the current user and level.
+ * - If not found, creates a new level object and adds it to the user.
+ * the level[0] is the english language levels and level[1] is the arabic langouage levels
+ */
 for (let i = 0; i < gameInfo.length; i++) {
-  if (gameInfo[i].userName == userObj.userName) {
-    for (let j = 0; j < gameInfo[i].levels.length; j++) {
-      if (gameInfo[i].levels[j].levelNumber == +level + 1) {
-        levelObj = gameInfo[i].levels[j];
-        levelFond = true;
+  if (lang === "english") {
+    if (gameInfo[i].userName == userObj.userName) {
+      for (let j = 0; j < gameInfo[i].levels[0].length; j++) {
+        if (gameInfo[i].levels[0][j].levelNumber == +level) {
+          levelObj = gameInfo[i].levels[0][j];
+          levelFond = true;
+        }
       }
+      iIndex = i;
     }
-    iIndex = i;
+  } else if (lang === "arabic") {
+    if (gameInfo[i].userName == userObj.userName) {
+      for (let j = 0; j < gameInfo[i].levels[1].length; j++) {
+        if (gameInfo[i].levels[1][j].levelNumber == +level) {
+          levelObj = gameInfo[i].levels[1][j];
+          levelFond = true;
+        }
+      }
+      iIndex = i;
+    }
   }
 }
+// ...existing code...
+// If the level was not found, create a new one for the user
 if (!levelFond) {
   levelObj = {
-    levelNumber: +level + 1,
+    levelNumber: +level,
     stars: 0,
     percent: 0,
     heighestSpeed: 0,
     wrongLetters: 0,
+    accuracy: 0,
   };
-  gameInfo[iIndex].levels.push(levelObj);
+  if (lang === "english") gameInfo[iIndex].levels[0].push(levelObj);
+  else gameInfo[iIndex].levels[1].push(levelObj);
 }
 
+// Create and attach keyboard using the module
+const keybord = createKeyboard();
+document.querySelector("section").append(keybord);
+
+/**
+ * Fetches the article for the current level from articals.json.
+ * @returns {Promise<Object>} The article object for the current level.
+ */
 async function getwords() {
   try {
-    let jsonObj = await fetch("../../articals.json");
+    let jsonObj = await fetch(articalsPath);
     let articalsObjArray = await jsonObj.json();
-    return articalsObjArray[level];
+    return articalsObjArray[+level - 1]; // Adjusted to match level index
   } catch {
-    throw new Error("the articals fill not found");
+    console.log(articalsPath);
+    throw new Error("the articals file not found");
   }
 }
 
+// Load the article and initialize the game state for the current level
 getwords().then((artical) => {
   includeArtical(artical);
   articalLetters = Array.from(wordsContainer.children);
@@ -54,7 +125,11 @@ getwords().then((artical) => {
   startContingSpeed();
 });
 
-//showing and hiding the keyboard
+/**
+ * Keyboard show/hide toggle logic
+ *
+ * - Toggles the visibility of the on-screen keyboard when the switch is clicked.
+ */
 let keyboradSuitch = document.querySelector("#keyOnOff");
 keyboradSuitch.onclick = function () {
   if (this.classList.contains("icon-on")) {
@@ -67,222 +142,60 @@ keyboradSuitch.onclick = function () {
     keybord.style = "display:flex";
   }
 };
-//adding the keyboard keys
 
-let keybord = document.querySelector("#keybord");
-let keys = Array.from("`1234567890-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./");
-for (let i = 0; i < keys.length; i++) {
-  let span = document.createElement("span");
-  span.appendChild(document.createTextNode(keys[i]));
-  span.setAttribute("data-key", keys[i]);
-  span.classList.add("key-shadow-out");
-  if (keys[i] == "f" || keys[i] == "j") {
-    let innerSpan = document.createElement("span");
-    innerSpan.className = "home-row";
-    span.appendChild(innerSpan);
-  }
-  keybord.appendChild(span);
-}
-
-creatkey("tap", "Tap", "q");
-creatkey("Back", "Backspace", "=", false);
-creatkey("capslock", "CapsLock", "a");
-creatkey("shift", "Shift", "z");
-creatkey("shift", "Shift", "/", false);
-creatkey("Enter", "Enter", "'", false);
-let space = document.createElement("div");
-space.append("space");
-space.setAttribute("data-key", " ");
-space.classList.add("key-shadow-out");
-keybord.appendChild(space);
-
-function creatkey(innerValue, dataValue, targetDataValue, befor = true) {
-  let key = document.createElement("span");
-  key.append(innerValue);
-  key.setAttribute("data-key", dataValue);
-  key.classList.add("key-shadow-out");
-
-  if (befor) {
-    document.querySelector(`[data-key="${targetDataValue}"]`).before(key);
-  } else {
-    document.querySelector(`[data-key="${targetDataValue}"]`).after(key);
-  }
-}
-
+// Render article letters using the module
 function includeArtical(artical) {
-  let letters = Array.from(artical.articalText);
-  for (let i = 0; i < letters.length; i++) {
-    let span = document.createElement("span");
-    span.appendChild(document.createTextNode(letters[i]));
-    span.setAttribute("data-key", letters[i]);
-    if (letters[i] == " ") {
-      span.classList.add("space");
-    }
-    wordsContainer.appendChild(span);
-  }
+  wordsContainer.innerHTML = "";
+  articalLetters = renderArticle(wordsContainer, artical.articalText);
 }
-//watshing the artical letters and changing backgrounds
+
+// Listen for typing events using the module
 function startlisnningArtical() {
-  let noClick = [
-    "Meta ",
-    "Tab",
-    "Shift",
-    "Alt",
-    "F12",
-    "Control",
-    "Delete",
-    "CapsLock",
-  ];
-  onkeydown = (ev) => {
-    if (!noClick.includes(ev.key)) {
-      if (ev.key == "Backspace") {
-        //previent running out of the array
-        if (corentletter - 1 < 0) corentletter = 0;
-        else corentletter--;
-        if (articalLetters[corentletter].classList.contains("right")) {
-          articalLetters[corentletter].classList.remove("right");
-        } else {
-          articalLetters[corentletter].classList.remove("wrong");
-          articalLetters[corentletter].classList.remove("fixed");
-          articalLetters[corentletter].classList.add("deleted");
-        }
-      } else if (ev.key == articalLetters[corentletter].dataset.key) {
-        if (articalLetters[corentletter].classList.contains("deleted")) {
-          articalLetters[corentletter].classList.add("fixed");
-        } else {
-          articalLetters[corentletter].classList.add("right");
-        }
-        //game ending
-        if (corentletter === articalLetters.length - 1) {
-          endGame();
-        } else corentletter++;
-      } else {
-        articalLetters[corentletter].classList.add("wrong");
-        //game ending
-        if (corentletter === articalLetters.length - 1) {
-          endGame();
-        } else corentletter++;
-      }
-    }
-  };
+  listenTyping(
+    articalLetters,
+    () => corentletter,
+    (val) => (corentletter = val),
+    endGame
+  );
 }
-let notShift = true;
 
+// Listen for keyboard events using the module
 function startlisnningKeybord() {
-  let keys = Array.from(keybord.children);
-  shickKeys(keys);
-
-  document.addEventListener("keyup", () => {
-    notShift = true;
-    shickKeys(keys);
-    if (notShift) {
-      removeShift();
-    }
-  });
+  listenKeyboard(keybord, articalLetters, () => corentletter);
 }
 
-function blinck(ele) {
-  if (ele.classList.contains("courent")) {
-    ele.classList.remove("key-shadow-out");
-    ele.classList.add("key-shadow-in");
-    setTimeout(() => {
-      ele.classList.add("key-shadow-out");
-      ele.classList.remove("key-shadow-in");
-    }, 50);
-  }
-}
-
-function shickKeys(keys) {
-  keys.forEach((ele) => {
-    if (ele.dataset.key == articalLetters[corentletter].dataset.key) {
-      ele.classList.add("courent");
-    } else if (
-      ele.dataset.key !== "Shift" &&
-      ele.dataset.key.toUpperCase() !== articalLetters[corentletter].dataset.key
-    ) {
-      blinck(ele);
-      ele.classList.remove("courent");
-    }
-    if (
-      ele.dataset.key.toUpperCase() ===
-        articalLetters[corentletter].dataset.key &&
-      ele.dataset.key.toUpperCase() !== ele.dataset.key
-    ) {
-      addShift(ele, keys);
-      notShift = false;
-    } else {
-    }
-  });
-}
-
-function addShift(ele, keysArray) {
-  let rightShiftKeys = Array.from("qwertasdfgzxcvb~!@#$%");
-  let shifts = keysArray.filter((val) => {
-    return val.dataset.key == "Shift";
-  });
-  ele.classList.add("courent");
-  if (rightShiftKeys.includes(`${ele.dataset.key}`)) {
-    shifts[1].classList.add("courent");
-  } else {
-    shifts[0].classList.add("courent");
-  }
-}
-
-function removeShift() {
-  document.querySelectorAll("[data-key='Shift']").forEach((ele) => {
-    blinck(ele);
-    ele.classList.remove("courent");
-  });
-}
-
+// ...existing code...
 function startContingSpeed() {
   time = setInterval(() => {
     seconds += 0.1;
   }, 100);
 }
-
+// ...existing code...
 function endGame() {
   clearInterval(time);
-  let wpm = Math.floor(
-    (60 / seconds) * wordsContainer.textContent.split(" ").length
-  );
-  let wrong = articalLetters.filter((ele) => {
-    return ele.classList.contains("wrong");
-  }).length;
-  let percent = 100;
-  //conting the speed percent
-  if (wpm >= requardSpeed) {
-  } else if (wpm >= (requardSpeed / 5) * 4) {
-    percent -= 10;
-  } else if (wpm >= (requardSpeed / 5) * 3) {
-    percent -= 20;
-  } else if (wpm >= (requardSpeed / 5) * 2) {
-    percent -= 30;
-  } else if (wpm >= requardSpeed / 5) {
-    percent -= 40;
-  }
-  //conting the wrongs percent
-  if (wrong >= articalLetters.length) {
-    percent -= 50;
-  } else if (wrong >= Math.round(articalLetters.length / 5) * 4) {
-    percent -= 40;
-  } else if (wrong >= Math.round(articalLetters.length / 5) * 3) {
-    percent -= 30;
-  } else if (wrong >= Math.round(articalLetters.length / 5) * 2) {
-    percent -= 20;
-  } else if (wrong >= Math.round(articalLetters.length / 5)) {
-    percent -= 10;
-  }
-  //conting the stars from the percent
-
+  let wpm = Math.floor(wordsContainer.textContent.length / 5 / (seconds / 60));
+  let wrong = articalLetters.filter((ele) =>
+    ele.classList.contains("wrong")
+  ).length;
+  let accuracy =
+    ((articalLetters.length - wrong) / articalLetters.length) * 100;
+  let speedScore = Math.min((wpm / requardSpeed) * 100, 100);
+  let percent = Math.round(accuracy * 0.6 + speedScore * 0.4);
   if (levelObj.percent <= percent) {
     if (levelObj.stars < Math.trunc(percent / 20)) {
       levelObj.stars = Math.trunc(percent / 20);
     }
+    levelObj.accuracy = Math.round(accuracy);
     levelObj.percent = percent;
     if (percent > 60) {
-      if (userObj.lastlevel < +levelObj.levelNumber + 1) {
-        userObj.lastlevel = +levelObj.levelNumber + 1;
+      if (lang === "arabic") {
+        if (userObj.lastlevel[1] < +levelObj.levelNumber + 1) {
+          userObj.lastlevel[1] = +levelObj.levelNumber + 1;
+        }
+      } else {
+        if (userObj.lastlevel[0] < +levelObj.levelNumber + 1) {
+          userObj.lastlevel[0] = +levelObj.levelNumber + 1;
+        }
       }
     }
     if (levelObj.heighestSpeed < wpm) {
@@ -296,9 +209,8 @@ function endGame() {
       levelObj.wrongLetters = wrong;
     }
   }
-
   localStorage.setItem("corentPlayer", JSON.stringify(userObj));
   localStorage.setItem("gameInfo", JSON.stringify(gameInfo));
-  localStorage.setItem("destenation", "levels");
-  location.href = "./loading.html";
+  localStorage.setItem("destenation", "results");
+  location.href = "/bags/loading.html";
 }

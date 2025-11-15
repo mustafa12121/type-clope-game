@@ -1,0 +1,17 @@
+[
+  {
+    "userName": "admin",
+    "levels": [
+      [
+        {
+          "levelNumber": 1,
+          "stars": 5,
+          "percent": 100,
+          "heighestSpeed": 76,
+          "wrongLetters": 0
+        }
+      ],
+      []
+    ]
+  }
+]
